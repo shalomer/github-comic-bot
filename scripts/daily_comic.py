@@ -17,7 +17,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
-import anthropic
+import openai
 import requests
 from google import genai
 from google.genai import types
@@ -31,7 +31,7 @@ from PIL import Image
 TARGET_REPO = os.environ.get("TARGET_REPO", "shalomer/social-confidence-coach-v2")
 COMIC_DIR = Path(__file__).resolve().parent.parent / "comic-strips"
 
-CLAUDE_MODEL = "claude-sonnet-4-6"
+OPENAI_MODEL = "gpt-4o"
 GEMINI_MODEL = "gemini-2.0-flash-exp-image-generation"
 
 IMAGE_STYLE_PREFIX = (
@@ -96,7 +96,7 @@ def fetch_commits(repo: str, date: Optional[str] = None) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Step 2: Generate comic script via Claude
+# Step 2: Generate comic script via OpenAI
 # ---------------------------------------------------------------------------
 
 SYSTEM_PROMPT = """\
@@ -191,8 +191,8 @@ Example 5 (navbar redesign — 384 lines):
 
 
 def generate_script(commits: list[dict]) -> list[dict]:
-    """Use Claude to generate a 4-panel comic script from commits."""
-    client = anthropic.Anthropic()
+    """Use OpenAI to generate a 4-panel comic script from commits."""
+    client = openai.OpenAI()
 
     commit_list = "\n".join(
         f"- [{c['sha']}] {c['message']}" for c in commits
@@ -202,14 +202,16 @@ def generate_script(commits: list[dict]) -> list[dict]:
         f"Create a 4-panel comic strip. Return ONLY the JSON array."
     )
 
-    response = client.messages.create(
-        model=CLAUDE_MODEL,
+    response = client.chat.completions.create(
+        model=OPENAI_MODEL,
         max_tokens=2000,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_msg}],
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": user_msg},
+        ],
     )
 
-    text = response.content[0].text.strip()
+    text = response.choices[0].message.content.strip()
 
     # Strip markdown code fences if present
     if text.startswith("```"):
@@ -362,9 +364,9 @@ def main():
         print("ERROR: GEMINI_API_KEY not set")
         sys.exit(1)
 
-    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not anthropic_key:
-        print("ERROR: ANTHROPIC_API_KEY not set")
+    openai_key = os.environ.get("OPENAI_API_KEY")
+    if not openai_key:
+        print("ERROR: OPENAI_API_KEY not set")
         sys.exit(1)
 
     telegram_token = os.environ.get("TELEGRAM_BOT_TOKEN")
@@ -386,7 +388,7 @@ def main():
     print()
 
     # Step 2: Generate script
-    print("[2/5] Generating comic script via Claude...")
+    print("[2/5] Generating comic script via OpenAI...")
     panels = generate_script(commits)
     print(f"  Generated {len(panels)} panels:")
     for i, p in enumerate(panels):
