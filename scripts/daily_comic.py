@@ -15,6 +15,7 @@ import tempfile
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import Optional
 
 import anthropic
 import requests
@@ -42,7 +43,7 @@ IMAGE_STYLE_PREFIX = (
 # Step 1: Fetch commits
 # ---------------------------------------------------------------------------
 
-def fetch_commits(repo: str, date: str | None = None) -> list[dict]:
+def fetch_commits(repo: str, date: Optional[str] = None) -> list[dict]:
     """Fetch commits from GitHub API for a given date (YYYY-MM-DD).
 
     If date is None, uses yesterday. Returns list of {sha, message, author, url}.

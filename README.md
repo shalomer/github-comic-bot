@@ -28,7 +28,12 @@ gh secret set ANTHROPIC_API_KEY    # console.anthropic.com
 gh secret set GEMINI_API_KEY       # aistudio.google.com/app/apikey
 gh secret set TELEGRAM_BOT_TOKEN   # from @BotFather
 gh secret set TELEGRAM_CHAT_ID     # from getUpdates
+gh secret set GH_PAT               # GitHub PAT with repo scope (needed to read private vibeCoach repo)
 ```
+
+> **Note:** The default `GITHUB_TOKEN` in Actions is scoped to the comic-bot repo only.
+> Since the vibeCoach repo is private, you need a Personal Access Token (PAT) with `repo` scope.
+> Create one at https://github.com/settings/tokens → Fine-grained → select `shalomer/social-confidence-coach-v2` → Contents: Read-only.
 
 ### 4. Test locally
 ```bash
