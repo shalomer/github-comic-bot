@@ -1,0 +1,88 @@
+{
+  "date": "2026-02-20",
+  "commits": [
+    {
+      "sha": "05de2a5",
+      "message": "Fix mobile calls getting stuck after first assistant message",
+      "author": "shalombook"
+    },
+    {
+      "sha": "316a036",
+      "message": "Add contact page and link from landing page footers",
+      "author": "shalombook"
+    },
+    {
+      "sha": "7b2a635",
+      "message": "Add privacy policy page and link from landing page footers",
+      "author": "shalombook"
+    },
+    {
+      "sha": "74719f1",
+      "message": "Fix phase name display and balance unmatched quotes in tips",
+      "author": "shalombook"
+    },
+    {
+      "sha": "5ef1e2e",
+      "message": "Add sitemap.xml and update robots.txt for SEO",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Fix: mobile calls stuck after first message",
+      "scene": "A massive ghost labeled '=== final' haunts an entire village, freezing everyone in place. Knight crosses out 6 characters on a tiny scroll and writes 6 new ones. Ghost explodes into sparkles.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The curse is lifted! Our phones work again!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I changed six characters."
+        }
+      ]
+    },
+    {
+      "title": "Add contact page and link from landing page footers",
+      "scene": "A majestic new footpath made of golden bricks leads to a shiny new Contact Page castle. Villagers dance down the path. One villager tosses flowers, another juggles scrolls marked 'Contact Us.'",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We can now reach the KINGDOM anytime!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It\u2019s just a link in the footer."
+        }
+      ]
+    },
+    {
+      "title": "Fix phase name display and balance unmatched quotes in tips",
+      "scene": "A little gremlin labeled 'Unmatched Quotes' juggles unbalanced quotation marks in the middle of a town square. The Knight calmly ties them up. Gleeful kids run around with balanced phrases.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Our sentences make sense again!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just matched the quotes."
+        }
+      ]
+    },
+    {
+      "title": "5 commits. 2 bugs fixed. 3 features added.",
+      "scene": "Knight sitting exhausted in a wooden chair. Background: villagers building a golden statue of the knight. One holds a chisel, others hang celebratory banners. Kids play with toy knights.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We named our pet bugfix!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "...it was just a day\u2019s work."
+        }
+      ]
+    }
+  ]
+}
