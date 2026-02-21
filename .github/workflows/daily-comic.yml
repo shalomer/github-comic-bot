@@ -5,6 +5,9 @@ on:
     - cron: '30 0 * * *'   # 00:30 UTC = 6:00 AM IST
   workflow_dispatch:         # manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   generate-comic:
     runs-on: ubuntu-latest
