@@ -29,58 +29,58 @@
   ],
   "panels": [
     {
-      "title": "Add dual payment gateway (Dodo + LemonSqueezy)",
-      "scene": "Two massive gates, one labeled 'Dodo' and the other 'LemonSqueezy,' stand side-by-side, guarding the entrance to the kingdom. Villagers are throwing money into both gates, cheering wildly. The Knight stands in the middle, looking slightly overwhelmed.",
+      "title": "Add dual payment gateway",
+      "scene": "Two massive gates, one labeled 'Dodo' and the other 'LemonSqueezy', now guard the entrance to the kingdom. Villagers are tossing gold coins through both gates. A flimsy, cardboard door labeled 'FAKE' stands slightly off to the side, ignored.",
       "bubbles": [
         {
           "speaker": "Villager",
-          "text": "Two payment options! We are truly blessed!"
+          "text": "Two payment gateways! Our commerce will be unstoppable!"
         },
         {
           "speaker": "Knight",
-          "text": "It's for A/B testing."
+          "text": "The 'fake door' is for testing."
         }
       ]
     },
     {
-      "title": "Archive and delete duplicate Coming Late Squad",
-      "scene": "A sad, pathetic-looking creature labeled 'Coming Late Squad' is being led away by guards. Villagers are waving goodbye, some with tears in their eyes. The Knight is calmly marking it off a list.",
+      "title": "Archive and delete Coming Late Squad",
+      "scene": "A sad, small group of villagers wearing tattered clothes labeled 'Coming Late Squad' are being escorted out of the kingdom by the Knight. Villagers cheer.",
       "bubbles": [
         {
           "speaker": "Villager",
-          "text": "The duplicates are gone! But... I'll miss them."
+          "text": "The Coming Late Squad is GONE! Punctuality reigns!"
         },
         {
           "speaker": "Knight",
-          "text": "It was a cron job that fired twice."
+          "text": "I archived the data first."
         }
       ]
     },
     {
-      "title": "Add backup of 6 deleted legacy Vapi assistants",
-      "scene": "Six spectral figures of wizards float in jars labeled 'Legacy Vapi Assistants' in a giant vault. The Knight is calmly placing the last jar on a shelf. Villagers are peering in from behind a glass window, awestruck.",
+      "title": "Backup of 6 deleted legacy assistants",
+      "scene": "A tiny wagon pulled by a donkey carries six ghostly figures labeled 'Legacy Vapi Assistant'. The Knight stands guard with a stern expression. Villagers are throwing flowers at the wagon.",
       "bubbles": [
         {
           "speaker": "Villager",
-          "text": "The ancients are preserved!"
+          "text": "Six legacy assistants saved for posterity! Our children will learn their names!"
         },
         {
           "speaker": "Knight",
-          "text": "Just in case we need them again."
+          "text": "It's just a backup file."
         }
       ]
     },
     {
-      "title": "5 commits. 2 gateways. 22 assistants archived.",
-      "scene": "The Knight is sitting on a rock, sharpening his sword with a weary expression. Villagers are constructing a giant pyramid in the background dedicated to the archived assistants. One villager is giving a speech.",
+      "title": "5 commits. 2 squads exiled. 2 payment options added.",
+      "scene": "The Knight sits wearily on his horse, wiping sweat from his brow. In the background, villagers are erecting a statue of a lemon next to a statue of a dodo. A child is being named 'Archive'.",
       "bubbles": [
         {
           "speaker": "Villager",
-          "text": "We shall never forget the great Vapi purge!"
+          "text": "All hail the Knight! He has balanced the realm!"
         },
         {
           "speaker": "Knight",
-          "text": "It was mostly cleanup."
+          "text": "I need a nap."
         }
       ]
     }
