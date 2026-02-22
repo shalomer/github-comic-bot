@@ -2,22 +2,25 @@
 """
 Daily Comic Strip Generator
 
-Fetches yesterday's commits from a GitHub repo, uses Claude to write a
+Fetches yesterday's commits from a GitHub repo, uses Gemini to write a
 4-panel comic script (medieval RPG style), generates images with Gemini,
-stitches them horizontally, and sends the strip to Telegram.
+stitches them horizontally, and saves/opens the result.
+
+Only requires a single GEMINI_API_KEY.
 """
 
 import json
 import os
 import sys
 import base64
+import platform
+import subprocess
 import tempfile
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
-import openai
 import requests
 from google import genai
 from google.genai import types
@@ -31,8 +34,8 @@ from PIL import Image
 TARGET_REPO = os.environ.get("TARGET_REPO", "shalomer/social-confidence-coach-v2")
 COMIC_DIR = Path(__file__).resolve().parent.parent / "comic-strips"
 
-OPENAI_MODEL = "gpt-4o"
-GEMINI_MODEL = "gemini-2.0-flash-exp-image-generation"
+GEMINI_TEXT_MODEL = "gemini-2.0-flash"
+GEMINI_IMAGE_MODEL = "gemini-2.0-flash-exp-image-generation"
 
 IMAGE_STYLE_PREFIX = (
     "Cartoon style, warm tones (coral, gold, cream), bold outlines, "
@@ -46,7 +49,7 @@ IMAGE_STYLE_PREFIX = (
 def fetch_commits(repo: str, date: Optional[str] = None) -> list[dict]:
     """Fetch commits from GitHub API for a given date (YYYY-MM-DD).
 
-    If date is None, uses yesterday. Returns list of {sha, message, author, url}.
+    If date is None, uses yesterday. Returns list of {sha, message, author}.
     """
     if date is None:
         yesterday = datetime.now(timezone.utc) - timedelta(days=1)
@@ -96,11 +99,11 @@ def fetch_commits(repo: str, date: Optional[str] = None) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Step 2: Generate comic script via OpenAI
+# Step 2: Generate comic script via Gemini
 # ---------------------------------------------------------------------------
 
 SYSTEM_PROMPT = """\
-You are a comedy writer for a daily comic strip called "The vibeCoach Chronicles."
+You are a comedy writer for a daily comic strip about GitHub commits.
 
 SETTING: A medieval fantasy kingdom where a calm, deadpan knight (the developer) \
 fixes bugs and builds features. The villagers (users) react with absurd, over-the-top \
@@ -190,9 +193,9 @@ Example 5 (navbar redesign — 384 lines):
 """
 
 
-def generate_script(commits: list[dict]) -> list[dict]:
-    """Use OpenAI to generate a 4-panel comic script from commits."""
-    client = openai.OpenAI()
+def generate_script(commits: list[dict], api_key: str) -> list[dict]:
+    """Use Gemini to generate a 4-panel comic script from commits."""
+    client = genai.Client(api_key=api_key)
 
     commit_list = "\n".join(
         f"- [{c['sha']}] {c['message']}" for c in commits
@@ -202,21 +205,21 @@ def generate_script(commits: list[dict]) -> list[dict]:
         f"Create a 4-panel comic strip. Return ONLY the JSON array."
     )
 
-    response = client.chat.completions.create(
-        model=OPENAI_MODEL,
-        max_tokens=2000,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_msg},
-        ],
+    response = client.models.generate_content(
+        model=GEMINI_TEXT_MODEL,
+        contents=user_msg,
+        config=types.GenerateContentConfig(
+            system_instruction=SYSTEM_PROMPT,
+            response_mime_type="application/json",
+        ),
     )
 
-    text = response.choices[0].message.content.strip()
+    text = response.text.strip()
 
     # Strip markdown code fences if present
     if text.startswith("```"):
-        text = text.split("\n", 1)[1]  # remove opening ```json
-        text = text.rsplit("```", 1)[0]  # remove closing ```
+        text = text.split("\n", 1)[1]
+        text = text.rsplit("```", 1)[0]
         text = text.strip()
 
     panels = json.loads(text)
@@ -249,7 +252,7 @@ def generate_panel_image(panel: dict, output_path: Path, api_key: str) -> bool:
     for attempt in range(max_retries):
         try:
             response = client.models.generate_content(
-                model=GEMINI_MODEL,
+                model=GEMINI_IMAGE_MODEL,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_modalities=["IMAGE", "TEXT"],
@@ -318,31 +321,26 @@ def stitch_panels(panel_paths: list[Path], output_path: Path, gap: int = 20) -> 
         x += img.width + gap
 
     canvas.save(output_path, "PNG")
-    print(f"Stitched {len(resized)} panels → {output_path}")
+    print(f"Stitched {len(resized)} panels -> {output_path}")
     return output_path
 
 
 # ---------------------------------------------------------------------------
-# Step 5: Send to Telegram
+# Helpers
 # ---------------------------------------------------------------------------
 
-def send_to_telegram(image_path: Path, caption: str, bot_token: str, chat_id: str) -> bool:
-    """Send the comic strip image to a Telegram chat."""
-    url = f"https://api.telegram.org/bot{bot_token}/sendPhoto"
-
-    with open(image_path, "rb") as f:
-        resp = requests.post(
-            url,
-            data={"chat_id": chat_id, "caption": caption},
-            files={"photo": (image_path.name, f, "image/png")},
-        )
-
-    if resp.status_code == 200:
-        print(f"Sent to Telegram (chat {chat_id})")
-        return True
-    else:
-        print(f"Telegram error: {resp.status_code} — {resp.text}")
-        return False
+def open_file(path: Path):
+    """Open a file with the system default viewer."""
+    system = platform.system()
+    try:
+        if system == "Darwin":
+            subprocess.run(["open", str(path)], check=True)
+        elif system == "Linux":
+            subprocess.run(["xdg-open", str(path)], check=True)
+        elif system == "Windows":
+            os.startfile(str(path))
+    except Exception:
+        pass  # Don't fail if open doesn't work (e.g. headless CI)
 
 
 # ---------------------------------------------------------------------------
@@ -362,20 +360,13 @@ def main():
     gemini_key = os.environ.get("GEMINI_API_KEY")
     if not gemini_key:
         print("ERROR: GEMINI_API_KEY not set")
+        print("Get one free at https://aistudio.google.com/app/apikey")
         sys.exit(1)
-
-    openai_key = os.environ.get("OPENAI_API_KEY")
-    if not openai_key:
-        print("ERROR: OPENAI_API_KEY not set")
-        sys.exit(1)
-
-    telegram_token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    telegram_chat = os.environ.get("TELEGRAM_CHAT_ID")
 
     repo = os.environ.get("TARGET_REPO", TARGET_REPO)
 
     # Step 1: Fetch commits
-    print(f"[1/5] Fetching commits from {repo}...")
+    print(f"[1/4] Fetching commits from {repo}...")
     commits = fetch_commits(repo, date)
     print(f"  Found {len(commits)} commits\n")
 
@@ -388,15 +379,15 @@ def main():
     print()
 
     # Step 2: Generate script
-    print("[2/5] Generating comic script via OpenAI...")
-    panels = generate_script(commits)
+    print("[2/4] Generating comic script via Gemini...")
+    panels = generate_script(commits, gemini_key)
     print(f"  Generated {len(panels)} panels:")
     for i, p in enumerate(panels):
         print(f"  Panel {i+1}: {p['title']}")
     print()
 
     # Step 3: Generate images
-    print("[3/5] Generating panel images via Gemini...")
+    print("[3/4] Generating panel images via Gemini...")
     with tempfile.TemporaryDirectory() as tmp:
         tmp_dir = Path(tmp)
         panel_paths = generate_all_panels(panels, tmp_dir, gemini_key)
@@ -407,20 +398,11 @@ def main():
         print()
 
         # Step 4: Stitch
-        print("[4/5] Stitching panels...")
+        print("[4/4] Stitching panels...")
         COMIC_DIR.mkdir(parents=True, exist_ok=True)
         output_path = COMIC_DIR / f"{date}.png"
         stitch_panels(panel_paths, output_path)
         print()
-
-    # Step 5: Telegram
-    print("[5/5] Sending to Telegram...")
-    if telegram_token and telegram_chat:
-        caption = f"vibeCoach Daily Comic — {date} — {len(commits)} commit{'s' if len(commits) != 1 else ''}"
-        send_to_telegram(output_path, caption, telegram_token, telegram_chat)
-    else:
-        print("  Telegram not configured (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID missing), skipping")
-    print()
 
     # Save script alongside image for reference
     script_path = COMIC_DIR / f"{date}.json"
@@ -429,6 +411,9 @@ def main():
     print(f"Saved script: {script_path}")
 
     print(f"\nDone! Comic saved to {output_path}")
+
+    # Open the image locally
+    open_file(output_path)
 
 
 if __name__ == "__main__":
