@@ -29,26 +29,26 @@
   ],
   "panels": [
     {
-      "title": "Add dual payment gateway (Dodo + LemonSqueezy) and fake door validation",
-      "scene": "Villagers celebrate in the marketplace, each holding two different coins with bird and lemon engravings. A fake door stands open, with confetti pouring out each time someone approaches it. Knight stands beside, arms crossed.",
+      "title": "Add dual payment gateway",
+      "scene": "Two giant golden gates, 'Dodo' and 'LemonSqueezy', stand at the entrance to the kingdom. Villagers are throwing money at both. A small, flimsy door labeled 'FAKE' stands slightly ajar next to them. Knight is facepalming.",
       "bubbles": [
         {
           "speaker": "Villager",
-          "text": "Two gateways! I can pay with lemons or dodos!"
+          "text": "Two ways to pay! Our riches shall flow freely!"
         },
         {
           "speaker": "Knight",
-          "text": "It's just a backup payment option."
+          "text": "The fake door does nothing."
         }
       ]
     },
     {
-      "title": "Archive and delete duplicate Coming Late Squad from Vapi",
-      "scene": "Knight casually pushes several identical knights labeled 'Coming Late Squad' into a swirling vortex. Villagers cheer as the duplicates vanish. Banners reading 'Always Late, but not this time!' are raised.",
+      "title": "Archive Coming Late Squad",
+      "scene": "A group of villagers, all wearing comical oversized clocks around their necks, are being herded into a giant archive box by the knight. The villagers are crying dramatically.",
       "bubbles": [
         {
           "speaker": "Villager",
-          "text": "Gone! No more late squad clones!"
+          "text": "Noooo! Not the Coming Late Squad!"
         },
         {
           "speaker": "Knight",
@@ -57,30 +57,30 @@
       ]
     },
     {
-      "title": "Archive and delete 15 old single-assistant scenarios from Vapi",
-      "scene": "A group of dusty scrolls labeled 'Old Scenario' burn in a bonfire. Villagers dance around the flames, shouting in victory. One villager raises a banner marked 'Single Assistant No More!'",
+      "title": "Delete 15 single-assistant scenarios",
+      "scene": "Knight casually throws fifteen tiny stages off a cliff. Each stage has a single miniature villager acting out a scene. The cliff overlooks a chasm of code.",
       "bubbles": [
         {
           "speaker": "Villager",
-          "text": "Fifteen scrolls gone! We are free!"
+          "text": "Fifteen plays, gone forever! The drama!"
         },
         {
           "speaker": "Knight",
-          "text": "Just clearing outdated scenarios."
+          "text": "They weren't being used."
         }
       ]
     },
     {
-      "title": "5 commits. 3 deletions. 2 backups added. 15 scrolls burned.",
-      "scene": "Knight sitting on a wooden stump, looking slightly tired. In the background, villagers construct a new monument of a flaming scroll with the Knight's face on it.",
+      "title": "5 commits. 29 scenarios archived. 2 payment methods.",
+      "scene": "The knight sits on a crate labeled 'Vapi Archives'. Villagers are carving a statue of the knight deleting code. One villager is presenting the knight with a small, dusty clock.",
       "bubbles": [
         {
           "speaker": "Villager",
-          "text": "We will name our sheep git-commit!"
+          "text": "We will always remember the Coming Late Squad..."
         },
         {
           "speaker": "Knight",
-          "text": "It was an average day."
+          "text": "Can I go home now?"
         }
       ]
     }
