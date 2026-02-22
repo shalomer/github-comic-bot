@@ -1,47 +1,40 @@
 # github-comic-bot
 
-Turns your GitHub commits into a daily medieval RPG comic strip. A calm, deadpan knight fixes bugs while villagers lose their minds.
+**Your commits deserve better than a changelog.**
 
-Powered entirely by **Gemini** (script writing + image generation) — only 1 API key needed.
+Every morning, this bot reads yesterday's commits and turns them into a 4-panel medieval RPG comic strip. A calm, deadpan knight (you) fixes bugs and ships features. The villagers (your users) react with weeping, statue-building, and naming their children after git commands.
 
-## Install via Claude Code (Recommended)
+Powered entirely by **Gemini AI** — one free API key, zero config, delivered straight to your GitHub Issues.
 
-The easiest way to get daily comics delivered to you:
+![Sample Comic](https://github.com/shalomer/github-comic-bot/releases/download/comic-2026-02-21/2026-02-21.jpg)
+
+> *5 real commits → 4 panels → 1 exhausted knight*
+
+---
+
+## Get Daily Comics in 2 Minutes
 
 ```bash
 claude skill install shalomer/github-comic-bot
 ```
 
-Then run the setup:
+Then:
 
 ```
 /daily-comic setup owner/repo
 ```
 
-This forks the bot, configures it for your repo, and triggers the first run. You'll get daily comics delivered as **GitHub Issues** — no email service, no Telegram, just GitHub notifications you already have.
+That's it. The setup forks this repo, configures your Gemini key, and triggers the first comic. Every morning after that, a new comic lands in your GitHub Issues — using notifications you already have.
 
-Or generate a one-off comic locally:
+**One-off mode** (no setup, just generate):
 
 ```
 /daily-comic owner/repo
 ```
 
-## Quick Start (Local)
+---
 
-```bash
-pip install -r requirements.txt
-
-GEMINI_API_KEY=your-key-here \
-TARGET_REPO=owner/repo \
-python scripts/daily_comic.py
-
-# Or for a specific date:
-python scripts/daily_comic.py 2026-02-20
-```
-
-The comic opens automatically after generation.
-
-## Setup (Automated Daily)
+## Manual Setup (No Claude Code)
 
 ### 1. Fork this repo
 
@@ -49,61 +42,62 @@ The comic opens automatically after generation.
 gh repo fork shalomer/github-comic-bot --clone=false
 ```
 
-### 2. Get a Gemini API key
+### 2. Get a free Gemini API key
 
-Free at https://aistudio.google.com/app/apikey
+https://aistudio.google.com/app/apikey
 
 ### 3. Configure your fork
 
 ```bash
-# Required: Gemini API key
 gh secret set GEMINI_API_KEY --repo YOUR_USERNAME/github-comic-bot
-
-# Required: which repo to make comics about
 gh variable set TARGET_REPO --repo YOUR_USERNAME/github-comic-bot --body "owner/repo"
 
-# Only for private repos: a PAT with repo read access
+# Only for private repos:
 gh secret set GH_PAT --repo YOUR_USERNAME/github-comic-bot
 ```
 
-### 4. Enable Actions on the fork
+### 4. Enable Actions
 
 ```bash
 gh api repos/YOUR_USERNAME/github-comic-bot/actions/permissions -X PUT -f enabled=true -f allowed_actions=all
 ```
 
-### 5. Trigger manually or wait
+### 5. Trigger or wait
 
-Go to Actions tab → "Daily Comic Strip" → "Run workflow"
+Go to **Actions** tab → "Daily Comic Strip" → **Run workflow**
 
-Runs automatically every day at 6:00 AM IST (00:30 UTC). Each comic is posted as a **GitHub Issue** with the image embedded and panel dialogue.
+Runs automatically every day at 6:00 AM IST (00:30 UTC).
+
+---
 
 ## How It Works
 
 1. Fetches yesterday's commits via GitHub API
 2. Gemini writes a 4-panel comic script (medieval RPG style)
-3. Gemini generates panel images
-4. Pillow stitches panels horizontally
-5. Saves to `comic-strips/YYYY-MM-DD.png`, commits to the repo
-6. Creates a GitHub Issue with the comic image and dialogue
+3. Gemini generates each panel as an image
+4. Pillow stitches panels into one strip
+5. Commits the PNG to the repo
+6. Creates a GitHub Issue with the comic + dialogue
+
+## Quick Start (Local)
+
+```bash
+pip install -r requirements.txt
+
+GEMINI_API_KEY=your-key TARGET_REPO=owner/repo python scripts/daily_comic.py
+```
 
 ## Cost
 
-- Gemini: free tier covers daily usage
-- GitHub Actions: free
+**$0.** Gemini free tier + GitHub Actions free tier.
 
-## Output
-
-Comics saved to `comic-strips/YYYY-MM-DD.png` with a `.json` script file. Each comic also appears as a GitHub Issue.
-
-## CLI Flags
+## CLI Reference
 
 ```bash
-python scripts/daily_comic.py [date]              # Generate comic (opens locally)
-python scripts/daily_comic.py --create-issue       # Create GitHub Issue from saved JSON (used by CI)
-python scripts/daily_comic.py --create-issue date  # Same, for a specific date
+python scripts/daily_comic.py [date]              # Generate locally
+python scripts/daily_comic.py --create-issue       # Post as GitHub Issue (CI)
 ```
 
-## Support
+---
 
-If you enjoy this, consider [buying me a coffee](https://buymeacoffee.com/shalomer).
+If you enjoy this, [buy me a coffee](https://buymeacoffee.com/shalomer).
