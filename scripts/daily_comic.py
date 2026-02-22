@@ -344,6 +344,53 @@ def open_file(path: Path):
         pass  # Don't fail if open doesn't work (e.g. headless CI)
 
 
+def upload_image_as_release(image_path: Path, date: str) -> Optional[str]:
+    """Compress PNG to JPEG and upload as a GitHub Release asset.
+
+    Returns the release asset download URL, which renders in issue markdown
+    for anyone with repo access (works for private repos).
+    """
+    # Compress PNG to JPEG
+    jpeg_path = image_path.with_suffix(".jpg")
+    try:
+        img = Image.open(image_path)
+        img.convert("RGB").save(jpeg_path, "JPEG", quality=85)
+        print(f"  Compressed {image_path.name} -> {jpeg_path.name} "
+              f"({jpeg_path.stat().st_size / 1024 / 1024:.1f}MB)")
+    except Exception as e:
+        print(f"  Compression failed: {e}")
+        return None
+
+    tag = f"comic-{date}"
+
+    # Create release and upload asset via gh CLI
+    try:
+        result = subprocess.run(
+            ["gh", "release", "create", tag, str(jpeg_path),
+             "--title", f"Daily Comic {date}",
+             "--notes", f"Auto-generated comic strip for {date}"],
+            capture_output=True, text=True,
+        )
+        if result.returncode != 0:
+            print(f"  Release creation failed: {result.stderr.strip()}")
+            return None
+
+        # Get the asset download URL
+        result = subprocess.run(
+            ["gh", "release", "view", tag, "--json", "assets",
+             "--jq", ".assets[0].url"],
+            capture_output=True, text=True, check=True,
+        )
+        asset_url = result.stdout.strip()
+        if asset_url:
+            print(f"  Release asset URL: {asset_url}")
+            return asset_url
+    except Exception as e:
+        print(f"  Release upload error: {e}")
+
+    return None
+
+
 def create_github_issue(date: str, panels: list[dict], commits: list[dict]):
     """Create a GitHub Issue with the comic image and panel dialogue."""
     gh_repo = os.environ.get("GITHUB_REPOSITORY", "")
@@ -351,7 +398,17 @@ def create_github_issue(date: str, panels: list[dict], commits: list[dict]):
         print("WARNING: GITHUB_REPOSITORY not set, skipping issue creation")
         return
 
-    image_url = f"https://raw.githubusercontent.com/{gh_repo}/main/comic-strips/{date}.png"
+    # Upload image as release asset (works for private repos)
+    image_path = COMIC_DIR / f"{date}.png"
+    image_url = None
+    if image_path.exists():
+        print("Uploading comic image as release asset...")
+        image_url = upload_image_as_release(image_path, date)
+
+    # Fallback to raw.githubusercontent.com (only works for public repos)
+    if not image_url:
+        print("  Falling back to raw.githubusercontent.com URL")
+        image_url = f"https://raw.githubusercontent.com/{gh_repo}/main/comic-strips/{date}.png"
 
     # Build the issue body
     body_lines = [
