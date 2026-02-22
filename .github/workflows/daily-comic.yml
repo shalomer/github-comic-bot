@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   generate-comic:
@@ -24,13 +25,18 @@ jobs:
       - name: Generate comic
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          TARGET_REPO: shalomer/social-confidence-coach-v2
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          TARGET_REPO: ${{ vars.TARGET_REPO || 'shalomer/social-confidence-coach-v2' }}
         run: python scripts/daily_comic.py
 
-      - name: Commit comic
+      - name: Commit and push comic
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add comic-strips/
           git diff --staged --quiet || git commit -m "Daily comic $(date +%Y-%m-%d)" && git push
+
+      - name: Create issue with comic
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/daily_comic.py --create-issue

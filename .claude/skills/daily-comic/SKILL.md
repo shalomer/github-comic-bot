@@ -1,77 +1,119 @@
 ---
 name: daily-comic
-description: Generate a comic strip from yesterday's GitHub commits. Turns commits into a medieval RPG 4-panel comic using Gemini.
+description: Generate a comic strip from GitHub commits, or set up automated daily delivery via GitHub Issues.
 user-invocable: true
-allowed-tools: Bash, Read, Write
-argument-hint: [owner/repo] [date]
+allowed-tools: Bash, Read, Write, AskUserQuestion
+argument-hint: [setup] owner/repo [date]
 ---
 
 # Daily Comic Strip Generator
 
-Generate a 4-panel medieval RPG comic strip from a GitHub repo's commits.
+Two modes: one-off local generation, or automated daily delivery via GitHub Issues.
 
-## Usage
+## Mode 1: One-off generation
 
 ```
 /daily-comic owner/repo
 /daily-comic owner/repo 2026-02-20
 ```
 
-- First argument: GitHub repo (e.g. `octocat/hello-world`)
-- Second argument (optional): date in YYYY-MM-DD format (defaults to yesterday)
+### Steps
 
-## Requirements
-
-The user needs `GEMINI_API_KEY` set in their environment. If not set, tell them to get a free key at https://aistudio.google.com/app/apikey and set it:
-
-```bash
-export GEMINI_API_KEY=your-key-here
-```
-
-For private repos, `GITHUB_TOKEN` must also be set (or `gh auth` must be logged in).
-
-## Steps
-
-1. **Check prerequisites**: Verify `GEMINI_API_KEY` is set. If not, stop and tell the user how to get one.
+1. **Check prerequisites**: Verify `GEMINI_API_KEY` is set. If not, stop and tell the user how to get one at https://aistudio.google.com/app/apikey
 
 2. **Install dependencies** (if needed):
 ```bash
 pip install google-genai Pillow requests 2>/dev/null
 ```
 
-3. **Fetch commits**: Run this to get yesterday's commits from the target repo:
+3. **Run the generator**:
 ```bash
-REPO="$ARGUMENTS[0]"
-DATE="${ARGUMENTS[1]:-$(date -u -v-1d +%Y-%m-%d 2>/dev/null || date -u -d 'yesterday' +%Y-%m-%d)}"
-```
-Use the GitHub API via `curl` or the `gh` CLI to fetch commits for that date. Filter out merge commits.
-
-If 0 commits found, tell the user "No commits found for {date}. No comic today." and stop.
-
-4. **Generate comic script**: Call Gemini (`gemini-2.0-flash`) with the commit list to generate a 4-panel comic script as JSON. Use this system prompt:
-
-> You are a comedy writer for a daily comic strip about GitHub commits.
-> SETTING: A medieval fantasy kingdom where a calm, deadpan knight (the developer) fixes bugs and builds features. The villagers (users) react with absurd, over-the-top emotions to every change.
-> Create a 4-panel comic. Panels 1-3: pick the 3 funniest commits. Panel 4: summary with exhausted knight and statue-building villagers.
-> Each panel: title (commit message), scene (vivid image gen description), bubbles (2-3 speech bubbles).
-> Knight = always calm, deadpan. Villagers = always losing their minds.
-> Return ONLY a JSON array of 4 panel objects.
-
-5. **Generate 4 images**: For each panel, call Gemini image generation (`gemini-2.0-flash-exp-image-generation`) with:
-```
-"Cartoon style, warm tones (coral, gold, cream), bold outlines, simple and clear, medieval fantasy village setting. TOP TITLE BAR (black bar with white text): '{title}'. {scene} Speech bubbles: {bubbles}"
+TARGET_REPO="owner/repo" python scripts/daily_comic.py [date]
 ```
 
-6. **Stitch panels**: Use Pillow to stitch all panel images horizontally with a 20px white gap. Save as `comic-strips/YYYY-MM-DD.png` in the current directory.
+If `scripts/daily_comic.py` doesn't exist in the current directory, clone it from the bot repo first:
+```bash
+TMPDIR=$(mktemp -d)
+git clone --depth 1 https://github.com/shalomer/github-comic-bot.git "$TMPDIR"
+TARGET_REPO="owner/repo" GEMINI_API_KEY="$GEMINI_API_KEY" python "$TMPDIR/scripts/daily_comic.py" [date]
+```
 
-7. **Open the result**: Open the PNG with the system viewer (`open` on macOS, `xdg-open` on Linux).
+4. **Show the user** where the comic was saved and the panel titles/dialogue.
 
-8. **Show the user**: Tell them where the comic was saved and show the panel titles/dialogue.
+## Mode 2: Automated setup
+
+```
+/daily-comic setup owner/repo
+```
+
+Sets up daily comic delivery as GitHub Issues. The user's fork of `github-comic-bot` runs a daily Action that generates a comic from `owner/repo`'s commits and posts it as an Issue.
+
+### Steps
+
+1. **Check gh auth**:
+```bash
+gh auth status
+```
+If not logged in, tell the user to run `gh auth login` first and stop.
+
+2. **Get Gemini API key**: Check if `GEMINI_API_KEY` is set in the environment. If not, ask the user for it. Tell them to get a free key at https://aistudio.google.com/app/apikey
+
+3. **Fork the bot repo**:
+```bash
+gh repo fork shalomer/github-comic-bot --clone=false
+```
+Capture the fork name from the output (it will be `{username}/github-comic-bot`).
+
+4. **Get the user's GitHub username**:
+```bash
+gh api user --jq '.login'
+```
+
+5. **Set the Gemini API key as a secret**:
+```bash
+gh secret set GEMINI_API_KEY --repo {username}/github-comic-bot --body "$GEMINI_API_KEY"
+```
+
+6. **Set the target repo as a variable**:
+```bash
+gh variable set TARGET_REPO --repo {username}/github-comic-bot --body "owner/repo"
+```
+
+7. **Check if target repo is private**:
+```bash
+gh repo view owner/repo --json isPrivate --jq '.isPrivate'
+```
+If private, the workflow needs a PAT to read commits. Set it:
+```bash
+GH_PAT=$(gh auth token)
+gh secret set GH_PAT --repo {username}/github-comic-bot --body "$GH_PAT"
+```
+If public, skip this step (the default `GITHUB_TOKEN` can read public repos).
+
+8. **Enable GitHub Actions on the fork**:
+```bash
+gh api repos/{username}/github-comic-bot/actions/permissions -X PUT -f enabled=true -f allowed_actions=all
+```
+
+9. **Trigger the first run**:
+```bash
+gh workflow run daily-comic.yml --repo {username}/github-comic-bot
+```
+
+10. **Tell the user**:
+> Done! Your fork `{username}/github-comic-bot` is set up.
+>
+> - Daily comics will be generated from `owner/repo` commits
+> - Each comic is posted as a GitHub Issue — you'll get notified via GitHub notifications
+> - Schedule: every day at 6:00 AM IST (00:30 UTC)
+> - First run triggered — check the Actions tab: https://github.com/{username}/github-comic-bot/actions
+>
+> To stop: disable the workflow in the Actions tab, or delete the fork.
 
 ## Important
 
-- Use `scripts/daily_comic.py` if it exists in the current repo (saves reimplementing everything).
-- If running from a different repo, create a temp Python script with the full pipeline logic.
-- Always save output to `comic-strips/` directory.
-- If Gemini image generation fails for a panel, retry up to 3 times with 5s delays.
-- Need at least 2 panels to produce a comic.
+- Always use `gh` CLI for GitHub operations (never raw API calls with curl)
+- The fork inherits the workflow file — no need to create it
+- `GITHUB_TOKEN` (the default Actions token) has issue write permission on the fork
+- `GH_PAT` is only needed if the target repo is private
+- If the fork already exists, `gh repo fork` will succeed (it's idempotent)

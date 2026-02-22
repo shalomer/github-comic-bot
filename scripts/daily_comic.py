@@ -9,6 +9,7 @@ stitches them horizontally, and saves/opens the result.
 Only requires a single GEMINI_API_KEY.
 """
 
+import argparse
 import json
 import os
 import sys
@@ -343,16 +344,74 @@ def open_file(path: Path):
         pass  # Don't fail if open doesn't work (e.g. headless CI)
 
 
+def create_github_issue(date: str, panels: list[dict], commits: list[dict]):
+    """Create a GitHub Issue with the comic image and panel dialogue."""
+    gh_repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if not gh_repo:
+        print("WARNING: GITHUB_REPOSITORY not set, skipping issue creation")
+        return
+
+    image_url = f"https://raw.githubusercontent.com/{gh_repo}/main/comic-strips/{date}.png"
+
+    # Build the issue body
+    body_lines = [
+        f"![Daily Comic — {date}]({image_url})",
+        "",
+        "---",
+        "",
+    ]
+
+    for i, panel in enumerate(panels):
+        body_lines.append(f"### Panel {i + 1}: {panel['title']}")
+        for bubble in panel.get("bubbles", []):
+            body_lines.append(f"> **{bubble['speaker']}**: {bubble['text']}")
+        body_lines.append("")
+
+    body_lines.extend([
+        "---",
+        f"*{len(commits)} commits summarized into 4 panels.*",
+    ])
+
+    title = f"Daily Comic — {date} — {len(commits)} commits"
+    body = "\n".join(body_lines)
+
+    try:
+        subprocess.run(
+            ["gh", "issue", "create", "--title", title, "--body", body],
+            check=True,
+        )
+        print(f"Created GitHub Issue: {title}")
+    except FileNotFoundError:
+        print("WARNING: gh CLI not found, skipping issue creation")
+    except subprocess.CalledProcessError as e:
+        print(f"WARNING: Failed to create issue: {e}")
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
 def main():
-    # Allow overriding the date via CLI arg (for testing)
-    date = sys.argv[1] if len(sys.argv) > 1 else None
+    parser = argparse.ArgumentParser(description="Daily Comic Strip Generator")
+    parser.add_argument("date", nargs="?", default=None, help="Date in YYYY-MM-DD format (defaults to yesterday)")
+    parser.add_argument("--create-issue", action="store_true", help="Create a GitHub Issue from saved JSON (run after commit+push)")
+    args = parser.parse_args()
+
+    date = args.date
     if date is None:
         yesterday = datetime.now(timezone.utc) - timedelta(days=1)
         date = yesterday.strftime("%Y-%m-%d")
+
+    # --create-issue: read from saved JSON, create issue, and exit
+    if args.create_issue:
+        script_path = COMIC_DIR / f"{date}.json"
+        if not script_path.exists():
+            print(f"No comic JSON found for {date}, skipping issue creation")
+            sys.exit(0)
+        with open(script_path) as f:
+            data = json.load(f)
+        create_github_issue(data["date"], data["panels"], data["commits"])
+        sys.exit(0)
 
     print(f"=== Daily Comic Generator — {date} ===\n")
 
@@ -411,8 +470,6 @@ def main():
     print(f"Saved script: {script_path}")
 
     print(f"\nDone! Comic saved to {output_path}")
-
-    # Open the image locally
     open_file(output_path)
 
 
