@@ -1,0 +1,83 @@
+{
+  "date": "2026-02-24",
+  "commits": [
+    {
+      "sha": "116b444",
+      "message": "Add generated scenario images for first-date and phone-date",
+      "author": "shalombook"
+    },
+    {
+      "sha": "e4c7705",
+      "message": "Add phone-date and first-date scenarios: full build (prompts, code, evals, Vapi setup)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "4ad6f37",
+      "message": "Add anti-system-prompt and off-topic guard rules to hard conversation prompts",
+      "author": "shalombook"
+    },
+    {
+      "sha": "04c76f1",
+      "message": "Add hard conversation v2: 3-phase prompts, tip system, and 52 evals",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Add generated scenario images",
+      "scene": "A royal painter struggles to paint a realistic image of a couple on a 'first date' scenario. His painting is hilariously bad \u2013 the people have three eyes and the table is floating. Villagers point and gasp at the painting, some crying.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The art... it's so REAL! I feel like I'm *on* the date!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "They are AI-generated. I added them to the scenarios."
+        }
+      ]
+    },
+    {
+      "title": "Add phone-date and first-date scenarios",
+      "scene": "A villager is kneeling before a small wooden phone. He's crying and hugging it. Other villagers are building a shrine to phones. The knight stands nearby, looking perplexed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A first date... from the *future*!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just... code that simulates the scenario."
+        }
+      ]
+    },
+    {
+      "title": "Add anti-prompt injection guard rules",
+      "scene": "A shadowy figure (representing prompt injection) is trying to whisper evil commands into a villager's ear. The knight erects a glowing barrier with his sword. The shadowy figure recoils in pain.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He protects us from the dark whispers! Our conversations are SAFE!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just added rules to ignore system prompt overrides."
+        }
+      ]
+    },
+    {
+      "title": "4 commits. New scenarios. New rules. All secure.",
+      "scene": "The knight sits wearily on a rock, polishing his sword. In the background, villagers are lifting a golden statue of a phone on their shoulders. One villager holds up a tiny scroll with the words 'anti-system-prompt' written on it.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us celebrate this 'Hard Conversation v2' with a parade!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I'm going to get some sleep. Wake me when there is a *real* dragon."
+        }
+      ]
+    }
+  ]
+}
