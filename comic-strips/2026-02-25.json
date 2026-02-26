@@ -1,0 +1,98 @@
+{
+  "date": "2026-02-25",
+  "commits": [
+    {
+      "sha": "52a1d81",
+      "message": "Treat Dodo requires_customer_action redirect as payment failed",
+      "author": "shalombook"
+    },
+    {
+      "sha": "760aff9",
+      "message": "Fix false-success on PurchaseSuccess by tracking checkout_id through redirect",
+      "author": "shalombook"
+    },
+    {
+      "sha": "212c1ea",
+      "message": "Update CLAUDE.md with payment tables and webhook event docs",
+      "author": "shalombook"
+    },
+    {
+      "sha": "3bcd219",
+      "message": "Replace notification-badge step numbers with rounded-rect track loop",
+      "author": "shalombook"
+    },
+    {
+      "sha": "2218c18",
+      "message": "Add E2E tests for CallStatusPill with screenshot proof",
+      "author": "shalombook"
+    },
+    {
+      "sha": "613188f",
+      "message": "Add public About page with mission copy and link from homepage footer",
+      "author": "shalombook"
+    },
+    {
+      "sha": "6dce96d",
+      "message": "Replace call toast notifications with dark glass status pill",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Treat Dodo requires_customer_action redirect as payment failed",
+      "scene": "A giant, confused Dodo bird is trying to deliver a treasure chest labeled 'PAYMENT'. Knight redirects the Dodo with a stern finger point. Villagers celebrate, throwing their empty wallets in the air.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He saved us from...whatever a 'Dodo requires_customer_action redirect' is!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was misclassifying failed payments."
+        }
+      ]
+    },
+    {
+      "title": "Replace notification-badge step numbers with rounded-rect track loop",
+      "scene": "A team of scribes meticulously painting numbers onto tiny badges. Knight replaces their brushes with a stencil and a can of spray paint. The badges now have rounded rectangles.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The rounded rectangles! They soothe my soul!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's more efficient."
+        }
+      ]
+    },
+    {
+      "title": "Add E2E tests for CallStatusPill with screenshot proof",
+      "scene": "The villagers are having a group therapy session where they all hold up screenshot printouts of 'CallStatusPills' and sob uncontrollably. The knight is standing nearby holding a magnifying glass, examining the 'CallStatusPills' on a giant screen.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The screenshot PROVES that our calls are being monitored by a PILL!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's end-to-end testing. I assure you, it's not an actual pill."
+        }
+      ]
+    },
+    {
+      "title": "7 commits. 0 dead Dodos. 3 new status pills.",
+      "scene": "Knight sitting wearily on a pile of scrolls. Villagers are erecting a giant monument made of rounded rectangles. One villager is carving 'E2E' into the base.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall forever sing the ballad of the status pill!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just... try not to break anything."
+        }
+      ]
+    }
+  ]
+}
