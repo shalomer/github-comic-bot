@@ -1,0 +1,108 @@
+{
+  "date": "2026-02-26",
+  "commits": [
+    {
+      "sha": "844dc53",
+      "message": "Fix missing animations on /onboarding by extracting shared CSS keyframes",
+      "author": "shalombook"
+    },
+    {
+      "sha": "b7d4c62",
+      "message": "Fix onboarding quiz: remove duplicate header, constrain width on desktop",
+      "author": "shalombook"
+    },
+    {
+      "sha": "387e6ee",
+      "message": "Add onboarding quiz, eval updates, ad creatives, reference images, and docs",
+      "author": "shalombook"
+    },
+    {
+      "sha": "490fe3d",
+      "message": "feat: scenario-specific onboarding with DB-driven config and rename to ScenarioBrief",
+      "author": "shalombook"
+    },
+    {
+      "sha": "5a25d1e",
+      "message": "feat: pass quiz-selected scenario to character intro onboarding",
+      "author": "shalombook"
+    },
+    {
+      "sha": "e9d3d57",
+      "message": "feat: route new and returning users through onboarding quiz",
+      "author": "shalombook"
+    },
+    {
+      "sha": "038f138",
+      "message": "feat: add OnboardingQuiz page with 4-screen guided flow",
+      "author": "shalombook"
+    },
+    {
+      "sha": "9460b9d",
+      "message": "feat: add onboarding quiz columns to profiles table",
+      "author": "shalombook"
+    },
+    {
+      "sha": "3da1a01",
+      "message": "Increase hard conversation call duration to 5 minutes",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Fix missing animations on /onboarding",
+      "scene": "A village is shrouded in grey. The onboarding sign above the gate is static and boring. Knight waves his hand, releasing colorful pixie dust (CSS Keyframes). The sign bursts to life with sparkling animations, and the village regains its color.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The onboarding is ALIVE! The sign... it wiggles!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Extracted shared CSS keyframes."
+        }
+      ]
+    },
+    {
+      "title": "Remove duplicate header",
+      "scene": "Villagers are banging their heads against a stone wall (the onboarding quiz). The wall has two identical headers carved into it. The knight calmly chisels away one of the headers. Villagers stop banging their heads.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He removed the extra header! We can think again!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was a duplicate element."
+        }
+      ]
+    },
+    {
+      "title": "Increase hard conversation call duration to 5 minutes",
+      "scene": "A villager is screaming into a cracked horn (phone). The call cuts off after 3 minutes. The knight adjusts a tiny dial on a large clock tower, changing '3' to '5'. The villager smiles as he continues talking.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Five whole minutes of hard talk! Our problems are solved!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Increased call duration."
+        }
+      ]
+    },
+    {
+      "title": "9 commits. Onboarding is FIXED... almost.",
+      "scene": "Knight is facepalming in a wooden chair. In the background, villagers are parading with a giant golden smartphone float and chanting 'On-Board-ing! On-Board-ing!'",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "All hail the Onboarding Knight!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's still in beta."
+        }
+      ]
+    }
+  ]
+}
