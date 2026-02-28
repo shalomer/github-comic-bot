@@ -1,0 +1,68 @@
+{
+  "date": "2026-02-27",
+  "commits": [
+    {
+      "sha": "ea9e5ab",
+      "message": "feat: add gamified preview at /game-preview with full demo flow",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Add gamified preview",
+      "scene": "A knight stands calmly while villagers cheer around a giant arcade machine labeled '/game-preview'. One villager is dressed as a pixelated dragon, another as a knight. Confetti rains down.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "It's...it's playable before we even BUY it?!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's a demo."
+        }
+      ]
+    },
+    {
+      "title": "Add gamified preview",
+      "scene": "Villagers are lined up to play the arcade machine. Some are crying tears of joy, others are high-fiving. One villager attempts to offer the knight gold, but he declines with a wave of his hand.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The game...it's beautiful! And the difficulty curve is *chef's kiss*"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's balanced for 5 minutes of play."
+        }
+      ]
+    },
+    {
+      "title": "Add gamified preview",
+      "scene": "A villager kneels before the arcade machine, hands clasped in prayer. The screen shows a 'Game Over' message. Other villagers look on with reverence.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "I have tasted digital glory! I have known defeat! It is...perfect!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It loops after the first level."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 1 Feature. Countless Tears.",
+      "scene": "The knight sits wearily on a rock, polishing his sword. In the background, villagers are erecting a shrine to the arcade machine, complete with offerings of gold and flowers.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us call this day 'Preview Day'! A day of joy and playable demos!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just marketing."
+        }
+      ]
+    }
+  ]
+}
