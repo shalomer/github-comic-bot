@@ -1,0 +1,88 @@
+{
+  "date": "2026-02-28",
+  "commits": [
+    {
+      "sha": "1162113",
+      "message": "feat: rename \"Cold Approach\" to \"Starting a Convo\" across UI and DB",
+      "author": "shalombook"
+    },
+    {
+      "sha": "9b1eea6",
+      "message": "feat: add gamification utils and wire into game preview",
+      "author": "shalombook"
+    },
+    {
+      "sha": "85a2e02",
+      "message": "feat: add category column to scenarios, replacing slug-based filtering",
+      "author": "shalombook"
+    },
+    {
+      "sha": "0b95e25",
+      "message": "Add game preview scoring implementation plan",
+      "author": "shalombook"
+    },
+    {
+      "sha": "41f9b00",
+      "message": "Add game preview scoring & gamification design doc",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Rename 'Cold Approach' to 'Starting a Convo'",
+      "scene": "A town crier stands on a box, ringing a bell. Villagers are either weeping dramatically or cheering. Banners are being changed from 'COLD APPROACH' to 'STARTING A CONVO'. The knight stands to the side, looking bored.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "No more shall we suffer the icy grip of the...cold approach!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just changed some words."
+        }
+      ]
+    },
+    {
+      "title": "Add gamification utils",
+      "scene": "Villagers are playing a medieval video game on a giant screen made of woven tapestries. They are cheering as points rack up. The knight stands nearby, looking at code on a scroll.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "LEVEL UP!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just a function library."
+        }
+      ]
+    },
+    {
+      "title": "Add category column to scenarios",
+      "scene": "A large group of scribes is frantically re-organizing scrolls in a massive library. They are moving scrolls from piles labeled 'Slug-Based' to shelves with shiny new labels. The knight is pointing at the shelves.",
+      "bubbles": [
+        {
+          "speaker": "Scribe",
+          "text": "Slug-based filtering is DEAD! Long live the category column!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's more efficient this way."
+        }
+      ]
+    },
+    {
+      "title": "5 commits. 3 features. 2 planning docs. And fun.",
+      "scene": "The knight sits on a crate, looking tired. In the background, villagers are building a giant golden arcade machine with the knight's face on it.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall play games in his honor forever!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just... please don't name your kids 'feat:'"
+        }
+      ]
+    }
+  ]
+}
