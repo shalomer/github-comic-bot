@@ -1,0 +1,83 @@
+{
+  "date": "2026-03-03",
+  "commits": [
+    {
+      "sha": "776c85e",
+      "message": "fix: rename all start buttons to \"Start Convo\"",
+      "author": "shalombook"
+    },
+    {
+      "sha": "5ff0ca3",
+      "message": "feat: add location+ethnicity variables to Vapi squad prompts",
+      "author": "shalombook"
+    },
+    {
+      "sha": "d7e187c",
+      "message": "feat: rename opener scenarios to ethnicity+location format, add location column",
+      "author": "shalombook"
+    },
+    {
+      "sha": "d75d577",
+      "message": "feat: add generate-character skill for scenario image creation",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Rename all start buttons to \"Start Convo\"",
+      "scene": "A town square. Every single button, banner, sign, even a baby's bib, has been painstakingly changed to read 'Start Convo'. Villagers are weeping and pointing at the buttons with reverence.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He unified the call to action! Clarity has come to our village!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was a find and replace across the codebase."
+        }
+      ]
+    },
+    {
+      "title": "Add location+ethnicity variables to Vapi squad prompts",
+      "scene": "The Knight stands before a giant bubbling cauldron labeled 'Vapi Prompts'. He adds two small vials labeled 'Location' and 'Ethnicity'. The cauldron glows intensely. Villagers gasp.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He has unlocked the secrets of... personalization!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just adding two variables to the string template."
+        }
+      ]
+    },
+    {
+      "title": "Rename opener scenarios to ethnicity+location format, add location column",
+      "scene": "The village scribe frantically scratches out old names on giant scrolls labeled 'Opener Scenarios'. Next to him, the Knight adds a new column to a giant spreadsheet carved into stone. Tears stream down the scribe's face.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The old names are gone! The location column... it's beautiful!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just a database schema change."
+        }
+      ]
+    },
+    {
+      "title": "4 commits. Buttons renamed. Variables added. Columns added. Characters generated.",
+      "scene": "The Knight, slumped against a stone wall, looks utterly drained. In the background, villagers are building a giant statue of a pixelated knight made of stone. Someone is already praying at its feet.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The algorithm smiles upon us!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need coffee."
+        }
+      ]
+    }
+  ]
+}
