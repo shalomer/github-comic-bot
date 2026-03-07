@@ -1,0 +1,88 @@
+{
+  "date": "2026-03-06",
+  "commits": [
+    {
+      "sha": "52df9f5",
+      "message": "fix: add avoidEval to Vapi SDK to resolve CSP unsafe-eval block",
+      "author": "shalombook"
+    },
+    {
+      "sha": "30a53e4",
+      "message": "fix: commit updated card images and eval report",
+      "author": "shalombook"
+    },
+    {
+      "sha": "eb1353f",
+      "message": "docs: add comprehensive market research - ICP, pain points, competitor analysis",
+      "author": "shalombook"
+    },
+    {
+      "sha": "0a24b17",
+      "message": "feat: fix opener location/ethnicity variables and upgrade phase images",
+      "author": "shalombook"
+    },
+    {
+      "sha": "8bffeb2",
+      "message": "fix: resolve 17 security audit findings and fix CI",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "CSP unsafe-eval block",
+      "scene": "A wizard with a glowing JavaScript wand casts a spell, creating a shimmering barrier labeled 'CSP'. A ghostly hand labeled 'eval()' reaches through the barrier. The Knight calmly adds 'avoidEval' to a scroll. The ghostly hand vanishes.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The dark magic of eval() is banished! Our websites are safe!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It disables the eval() function. It's generally bad practice."
+        }
+      ]
+    },
+    {
+      "title": "Resolve 17 security audit findings",
+      "scene": "Seventeen tiny gremlins are trying to break into a fortress made of code. Each gremlin has a tiny pickaxe labeled 'XSS', 'CSRF', etc. The Knight calmly seals the cracks with a magical putty gun.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Our digital kingdom is impenetrable! The hackers are foiled!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just closing some security loopholes. Standard procedure."
+        }
+      ]
+    },
+    {
+      "title": "Fix opener location/ethnicity variables",
+      "scene": "A royal scribe is frantically rewriting a census scroll. Villagers look on in confusion. The Knight points to a few incorrect entries.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Our identities are saved! No longer shall we be misclassified!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just correcting some variable assignments. Wrong data types."
+        }
+      ]
+    },
+    {
+      "title": "5 commits. 3 fixes. 1 feature. 1 documentation.",
+      "scene": "The Knight sits wearily on a stone bench, polishing his sword. Villagers are constructing a giant stone tablet with the words 'Market Research' inscribed on it. A small child is named 'AvoidEval'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us celebrate the clarity of his documentation!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just a job."
+        }
+      ]
+    }
+  ]
+}
