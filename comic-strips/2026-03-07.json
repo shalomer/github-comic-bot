@@ -1,0 +1,80 @@
+{
+  "date": "2026-03-07",
+  "commits": [
+    {
+      "sha": "f85d614",
+      "message": "feat: replace regex mission detection with LLM-based analysis",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat: replace regex mission detection with LLM-based analysis",
+      "scene": "A wizard's tower crumbles as a sleek, chrome AI robot emerges from the rubble. Villagers gape in terror and awe. The Knight stands calmly nearby, holding a wrench.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The ancient ways... they are GONE!"
+        },
+        {
+          "speaker": "Other Villager",
+          "text": "Our regular expressions... useless!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's more accurate now."
+        }
+      ]
+    },
+    {
+      "title": "feat: replace regex mission detection with LLM-based analysis",
+      "scene": "An old wizard, tears streaming down his face, throws his regex books into a bonfire. He's surrounded by other wizards who are equally distraught. In the background, the AI robot is analyzing code with glowing eyes.",
+      "bubbles": [
+        {
+          "speaker": "Wizard",
+          "text": "My beautiful \\w+! All for naught!"
+        },
+        {
+          "speaker": "Other Wizard",
+          "text": "My precious backreferences..."
+        },
+        {
+          "speaker": "Knight",
+          "text": "It uses a large language model."
+        }
+      ]
+    },
+    {
+      "title": "feat: replace regex mission detection with LLM-based analysis",
+      "scene": "A villager is being interviewed by a scribe. The villager is sweating nervously, trying to explain their life's mission to the AI robot via a microphone. The robot's screen displays 'PROCESSING...'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "I... uh... I want to collect all the shiny rocks?"
+        },
+        {
+          "speaker": "AI Robot",
+          "text": "Analyzing for strategic alignment..."
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's determining mission objectives."
+        }
+      ]
+    },
+    {
+      "title": "1 commit: Regex RIP. AI Overlord.",
+      "scene": "The Knight sits wearily on a crate. Villagers are constructing a giant golden statue of the AI robot, complete with glowing eyes. A child is offering the robot flowers.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall name our children 'Transformer'!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need coffee."
+        }
+      ]
+    }
+  ]
+}
