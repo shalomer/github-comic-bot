@@ -1,0 +1,44 @@
+name: Daily Comic Strip
+
+on:
+  schedule:
+    - cron: '30 0 * * *'   # 00:30 UTC daily
+  workflow_dispatch:         # manual trigger
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  generate-comic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate comic
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          TARGET_REPO: ${{ vars.TARGET_REPO }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/daily_comic.py
+
+      - name: Commit and push comic
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add comic-strips/
+          git diff --staged --quiet || git commit -m "Daily comic $(date +%Y-%m-%d)" && git push
+
+      - name: Create issue with comic
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/daily_comic.py --create-issue
