@@ -1,0 +1,118 @@
+{
+  "date": "2026-03-31",
+  "commits": [
+    {
+      "sha": "0929fc0",
+      "message": "docs: log API URL updates + new Terrified ad concept",
+      "author": "shalombook"
+    },
+    {
+      "sha": "635a75f",
+      "message": "fix: use --env-file for eval commands to load API keys",
+      "author": "shalombook"
+    },
+    {
+      "sha": "73be670",
+      "message": "feat: add npm run test:evals:tips for tip-guided evals only",
+      "author": "shalombook"
+    },
+    {
+      "sha": "6bff164",
+      "message": "fix: eval config now loads .env.local for API keys",
+      "author": "shalombook"
+    },
+    {
+      "sha": "2fe9d76",
+      "message": "fix: update hard-convo OG image in middleware to new scenario image",
+      "author": "shalombook"
+    },
+    {
+      "sha": "393ea01",
+      "message": "fix: use calm phase 3 image for hard convo landing page hero",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c195817",
+      "message": "test: wire previousTips into all 7 tip-guided evals",
+      "author": "shalombook"
+    },
+    {
+      "sha": "b35655b",
+      "message": "feat: update hard conversation images with Unsplash-based photos",
+      "author": "shalombook"
+    },
+    {
+      "sha": "96bf2a4",
+      "message": "fix: inject previous tips into prompt to prevent repetition",
+      "author": "shalombook"
+    },
+    {
+      "sha": "9f251a8",
+      "message": "fix: hard convo tips stuck on validation in Phase 2",
+      "author": "shalombook"
+    },
+    {
+      "sha": "699e08c",
+      "message": "feat: color-coded phase indicator (red/orange/green) + mission nudges (#28)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "fix: eval config now loads .env.local for API keys",
+      "scene": "A wizard (representing the eval config) is frantically searching through piles of scrolls (API keys). The knight calmly hands him a single, clearly labeled scroll (.env.local).",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He found the SECRET knowledge! Our automations are SAVED!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just a file with some keys in it."
+        }
+      ]
+    },
+    {
+      "title": "fix: hard convo tips stuck on validation in Phase 2",
+      "scene": "A large gear labeled 'Phase 2' is jammed with sticky goo. Villagers look on in horror. The knight uses a small wrench to dislodge a tiny pebble, and the gear spins freely.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The CONVERSATION flows again! Our feelings are VALIDATED!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was a minor input validation error."
+        }
+      ]
+    },
+    {
+      "title": "feat: color-coded phase indicator (red/orange/green)",
+      "scene": "The village elder is staring in awe at a traffic light that wasn't there before (the phase indicator). One villager is painting his house green.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The COLORS! Now we know what PHASE we are in!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It shows the current phase using CSS colors."
+        }
+      ]
+    },
+    {
+      "title": "11 commits. 7 fixes. 3 features. Color is life.",
+      "scene": "The knight is leaning against a wall, looking bored. Villagers are bowing before a newly erected statue of a traffic light. One villager is holding a baby named 'Dot-env-local'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall praise the color gods forever!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need a vacation."
+        }
+      ]
+    }
+  ]
+}
