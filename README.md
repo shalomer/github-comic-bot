@@ -2,11 +2,11 @@
 
 **Your commits deserve better than a changelog.**
 
-Every morning, this bot reads yesterday's commits and turns them into a 4-panel medieval RPG comic strip -- delivered to your Telegram or GitHub Issues. Powered entirely by Gemini AI. Costs $0.
+Every morning, this bot reads yesterday's commits and turns them into a 4-panel medieval RPG comic strip -- delivered to your Telegram. Powered entirely by Gemini AI. Costs $0.
 
-![Sample Comic](https://raw.githubusercontent.com/shalomer/github-comic-bot/main/comic-strips/2026-03-31.png)
+![Sample Comic](https://raw.githubusercontent.com/shalomer/github-comic-bot/main/comic-strips/sample-nextjs.png)
 
-> *198 commits from [openclaw/openclaw](https://github.com/openclaw/openclaw). 4 panels. 1 exhausted knight.*
+> *4 commits from [vercel/next.js](https://github.com/vercel/next.js). 4 panels. 1 exhausted knight.*
 
 A calm, deadpan knight (you) fixes bugs and ships features. The villagers (your users) react with weeping, statue-building, and naming their children after git commands.
 
@@ -62,7 +62,7 @@ To find your chat ID: send any message to your bot, then open `https://api.teleg
 2. Gemini writes a 4-panel comic script (medieval RPG style)
 3. Gemini generates each panel as an image
 4. Pillow stitches the panels into one strip
-5. Delivered via Telegram and/or GitHub Issue
+5. Delivered via Telegram
 
 ## Run locally
 
