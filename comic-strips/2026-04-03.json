@@ -1,0 +1,73 @@
+{
+  "date": "2026-04-03",
+  "commits": [
+    {
+      "sha": "9ae6926",
+      "message": "docs: add Anand voice engine system prompt for Reddit bot",
+      "author": "shalombook"
+    },
+    {
+      "sha": "da0a2e9",
+      "message": "fix: add OG image meta tags for /outofyourleague route",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "docs: add Anand voice engine system prompt for Reddit bot",
+      "scene": "A villager is bowing down to a small, dusty scroll, tears streaming down their face. The knight stands beside them, holding a microphone and looking perplexed. In the background, villagers are arguing about the correct pronunciation of 'Anand'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The bot...it speaks with *wisdom* now!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's a system prompt. It just tells it what to say."
+        }
+      ]
+    },
+    {
+      "title": "fix: add OG image meta tags for /outofyourleague route",
+      "scene": "A village artist is frantically painting a giant, ornate picture frame around a road sign that says '/outofyourleague'. Other villagers are snapping pictures with wooden cameras. The Knight adjusts the sign slightly.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The images... they *appear* on the Link Books now!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I added meta tags. It helps with previews."
+        }
+      ]
+    },
+    {
+      "title": "fix: add OG image meta tags for /outofyourleague route",
+      "scene": "The same sign '/outofyourleague' now has hundreds of villagers lined up to take pictures of themselves next to it. One villager is trying to climb on top. The Knight stands to the side, arms crossed, looking tired.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Everyone *must* see me standing here!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's for social media sharing."
+        }
+      ]
+    },
+    {
+      "title": "2 commits. 1 Reddit bot update. 1 meta tag fix. 0 sleep.",
+      "scene": "The Knight slumps against a stone wall, eyes closed. Behind him, villagers are erecting a billboard-sized version of the Reddit bot's logo and the `/outofyourleague` road sign.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall celebrate the Meta Tag Day every year!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just... leave me alone."
+        }
+      ]
+    }
+  ]
+}
