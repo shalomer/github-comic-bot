@@ -1,0 +1,78 @@
+{
+  "date": "2026-04-05",
+  "commits": [
+    {
+      "sha": "6513b98",
+      "message": "add: coffee shop slideshow carousel images (4:5) for Instagram",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c06a4f5",
+      "message": "docs: rename voice engine and dating files to character-branded names",
+      "author": "shalombook"
+    },
+    {
+      "sha": "52c0c84",
+      "message": "docs: add voice engine system prompt for Reddit bot",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Add: Coffee shop slideshow carousel images",
+      "scene": "Villagers lined up outside a coffee shop. They are staring in awe at a wooden slideshow carousel displaying photos of coffee beans and latte art. Some villagers are crying tears of joy.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The resolution! The aspect ratio! It's... it's glorious!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "They're just coffee pictures for Instagram."
+        }
+      ]
+    },
+    {
+      "title": "Rename voice engine and dating files",
+      "scene": "The knight stands in front of a stone filing cabinet. He casually changes the labels on two folders from 'voice_engine_001' and 'dating_profiles' to 'sir_reginald_voice' and 'princess_petunia_matches'. The villagers are throwing rose petals at his feet.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He has blessed us with CHARACTER-BRANDED nomenclature!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just renamed some files."
+        }
+      ]
+    },
+    {
+      "title": "Add voice engine system prompt for Reddit bot",
+      "scene": "A giant mechanical Reddit bot wearing a crown is dispensing wisdom (actually just nonsensical comments) to kneeling villagers. The knight is holding a tiny scroll of code he just added that made the bot function. ",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The prophecies! They are being AUTOMATICALLY GENERATED!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just a prompt telling it what to say."
+        }
+      ]
+    },
+    {
+      "title": "3 commits. 1 bot. Countless blessings.",
+      "scene": "The knight is sitting on a crate looking utterly bored. In the background, villagers are carving his likeness into a giant coffee bean. A banner reads 'All hail the file renamer'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us celebrate the great refactoring!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Can I go home now?"
+        }
+      ]
+    }
+  ]
+}
