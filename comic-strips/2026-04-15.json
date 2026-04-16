@@ -1,0 +1,68 @@
+{
+  "date": "2026-04-15",
+  "commits": [
+    {
+      "sha": "fc7e9bd",
+      "message": "feat: add activation funnel tracking events to Mixpanel (#30)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat: add activation funnel tracking events to Mixpanel",
+      "scene": "A wizard in a tall hat, labeled 'Mixpanel', stares into a crystal ball that shows tiny villagers clicking around on a webpage. The villagers are oblivious. The Knight stands nearby, looking bored.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The Great Eye watches our every move!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It tracks user engagement."
+        }
+      ]
+    },
+    {
+      "title": "feat: add activation funnel tracking events to Mixpanel",
+      "scene": "The 'Mixpanel' wizard now has a gigantic score counter next to him which increment every time the villagers click around on the webpage. The score is rapidly increasing.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We're all going to be rich!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just counting page visits."
+        }
+      ]
+    },
+    {
+      "title": "feat: add activation funnel tracking events to Mixpanel",
+      "scene": "A royal herald runs down the main street ringing a bell. He is followed by a group of excited townsfolk. The knight is looking in the herald's direction, annoyed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Hear Ye, Hear Ye! The Funnel is Activating!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's a sales tool, guys."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 1 feature. 0 bugs.",
+      "scene": "Knight sitting in a wooden chair, polishing his sword. In the background, villagers are erecting a small, unimpressive stone obelisk. It is slightly crooked. One villager is holding a level against it.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A monument to funneling!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I'm going to lunch."
+        }
+      ]
+    }
+  ]
+}
