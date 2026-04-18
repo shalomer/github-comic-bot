@@ -1,0 +1,78 @@
+{
+  "date": "2026-04-17",
+  "commits": [
+    {
+      "sha": "b75b85a",
+      "message": "feat: refund credit for calls under 15 seconds",
+      "author": "shalombook"
+    },
+    {
+      "sha": "13d0829",
+      "message": "feat: mic permission gate before Vapi calls",
+      "author": "shalomer"
+    },
+    {
+      "sha": "809ef3e",
+      "message": "fix: match real Chrome macOS mic permission dialog",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat: refund credit for calls under 15 seconds",
+      "scene": "A medieval peasant is sobbing uncontrollably, clutching a single silver coin. The knight stands beside him, looking perplexed. A large sign reads: '15 seconds or FREE!'",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Fifteen seconds! He values our time!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's a simple conditional statement."
+        }
+      ]
+    },
+    {
+      "title": "feat: mic permission gate before Vapi calls",
+      "scene": "A villager kneels before the knight, offering a microphone on a velvet pillow. Behind them, other villagers cheer. The knight looks slightly uncomfortable.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We now have PERMISSION before we speak! The gods are smiling!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It prevents errors in voice calls."
+        }
+      ]
+    },
+    {
+      "title": "fix: match real Chrome macOS mic permission dialog",
+      "scene": "Two identical-looking stone tablets are displayed side-by-side. One tablet is slightly crooked, and villagers are recoiling in horror. The knight carefully adjusts the crooked tablet. The second tablet has the Chrome logo.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The dialog... it's... perfect! My eyes can rest now!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's pixel-perfect alignment."
+        }
+      ]
+    },
+    {
+      "title": "3 commits. Mic permissions granted. Time valued. Pixels aligned.",
+      "scene": "The knight is slumped against a stone wall, looking weary. In the background, villagers are erecting a giant golden microphone statue. One villager is carving a pixel into the base of the statue.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall call this day 'Microphone Monday'!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need a nap."
+        }
+      ]
+    }
+  ]
+}
