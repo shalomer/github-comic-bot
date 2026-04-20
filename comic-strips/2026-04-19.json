@@ -1,0 +1,68 @@
+{
+  "date": "2026-04-19",
+  "commits": [
+    {
+      "sha": "6b1d19e",
+      "message": "feat: Resend email integration (welcome, purchase confirmation, audience sync) (#32)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat: Resend email integration",
+      "scene": "Villagers are screaming with joy as letters rain from the sky. A child catches a letter that says 'Welcome to our Kingdom!' and starts crying tears of happiness. Knight stands calmly, arms crossed, under a small, localized raincloud of emails.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The emails! They are arriving!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I connected the mail server."
+        }
+      ]
+    },
+    {
+      "title": "feat: Resend email integration",
+      "scene": "A villager kneels before the knight, offering a newly-baked pie. Other villagers are constructing a giant stone mailbox with the knight's face on it.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We'll never miss a confirmation email again!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It handles welcome emails too."
+        }
+      ]
+    },
+    {
+      "title": "feat: Resend email integration",
+      "scene": "A frantic villager shows another villager a parchment with a timestamp on it. They're both pointing at it with wide eyes. The knight sighs.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "It arrived in FIVE SECONDS!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "The latency is acceptable."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. Feature Complete. Emails Sent.",
+      "scene": "The knight sits slumped against a giant stone mailbox. Villagers are crowding around, taking selfies with the mailbox. One is trying to mail a cat. The knight looks exhausted.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "This is the greatest day of my life!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just... one commit."
+        }
+      ]
+    }
+  ]
+}
