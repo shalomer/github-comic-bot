@@ -1,0 +1,160 @@
+{
+  "date": "2026-04-20",
+  "commits": [
+    {
+      "sha": "59a9f00",
+      "message": "docs: session log 2026-04-20",
+      "author": "shalombook"
+    },
+    {
+      "sha": "19878c2",
+      "message": "docs: session log 2026-04-20",
+      "author": "shalombook"
+    },
+    {
+      "sha": "952367f",
+      "message": "docs: session log 2026-04-20",
+      "author": "shalombook"
+    },
+    {
+      "sha": "87bcba7",
+      "message": "docs: session log 2026-04-20",
+      "author": "shalombook"
+    },
+    {
+      "sha": "04c3609",
+      "message": "docs: session log 2026-04-20",
+      "author": "shalombook"
+    },
+    {
+      "sha": "216c996",
+      "message": "feat: mic permission redesign with modal overlays (#39)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "c927dc7",
+      "message": "docs: session log 2026-04-20",
+      "author": "shalombook"
+    },
+    {
+      "sha": "7163534",
+      "message": "docs: session log 2026-04-20",
+      "author": "shalombook"
+    },
+    {
+      "sha": "da11fb2",
+      "message": "docs: session log 2026-04-20",
+      "author": "shalombook"
+    },
+    {
+      "sha": "95ca5b3",
+      "message": "docs: add mic permission denied UX redesign mockup (interactive)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "2721070",
+      "message": "feat: add /session-log slash command for Claude Code session diary",
+      "author": "shalombook"
+    },
+    {
+      "sha": "3c38116",
+      "message": "feat: split Telegram bots \u2014 notify bot for signups/reports, canary for errors",
+      "author": "shalombook"
+    },
+    {
+      "sha": "cfe46ce",
+      "message": "feat: shift Meta Ads report to Telegram, remove Reddit cadence workflow",
+      "author": "shalombook"
+    },
+    {
+      "sha": "3b083d0",
+      "message": "fix: update notify-signup tests for Telegram (was Slack)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "b2b73fd",
+      "message": "feat: shift new signup notification from Slack to Telegram",
+      "author": "shalombook"
+    },
+    {
+      "sha": "a36aac7",
+      "message": "feat: Telegram alerts for call failures and feedback errors",
+      "author": "shalombook"
+    },
+    {
+      "sha": "5045b66",
+      "message": "fix: allow Daily.co iframe mic access + add mic check funnel tracking",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat: shift new signup notification from Slack to Telegram",
+      "scene": "A group of villagers bowing down to a Telegram bot wearing a crown. A sad, discarded Slack bot sits in a trash can. The knight stands nearby, unimpressed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The prophecy is true! Telegram has come to save us!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just a different messaging app. It gets the sign-up alerts now."
+        },
+        {
+          "speaker": "Slack Bot",
+          "text": "Beep boop...I am obsolete."
+        }
+      ]
+    },
+    {
+      "title": "feat: Telegram alerts for call failures and feedback errors",
+      "scene": "Villagers celebrating wildly, throwing confetti into the air. A small imp labeled 'Call Failure' cowers in a corner, being chased away by a Telegram bot wielding a rolled-up newspaper.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "No more call failures! Our calls are safe!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Now Telegram will tell us when calls fail."
+        },
+        {
+          "speaker": "Call Failure Imp",
+          "text": "Woe is me! I'm being reported!"
+        }
+      ]
+    },
+    {
+      "title": "fix: allow Daily.co iframe mic access + add mic check funnel tracking",
+      "scene": "A villager struggles to speak into a microphone, his face red. The Knight waves his hand, and suddenly the microphone works. Beams of light shine down.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "I can be HEARD! The gods have blessed my voice!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Allowed microphone access in the iframe. And added tracking."
+        },
+        {
+          "speaker": "Other villager",
+          "text": "Praise the tracking!"
+        }
+      ]
+    },
+    {
+      "title": "17 commits. 2 fixes. 7 docs. 8 features.",
+      "scene": "The knight, utterly drained, leans against a stone wall. In the background, villagers are constructing a giant stone Telegram logo.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A new era of messaging dawns!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just another day."
+        }
+      ]
+    }
+  ]
+}
