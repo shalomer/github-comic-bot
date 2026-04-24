@@ -1,0 +1,178 @@
+{
+  "date": "2026-04-23",
+  "commits": [
+    {
+      "sha": "2631015",
+      "message": "fix: default payment gateway to dodo instead of lemonsqueezy",
+      "author": "shalombook"
+    },
+    {
+      "sha": "775bf5b",
+      "message": "debug: log PAYMENT_GATEWAY value on checkout",
+      "author": "shalombook"
+    },
+    {
+      "sha": "2941d33",
+      "message": "chore: re-set PAYMENT_GATEWAY=dodo (fix whitespace)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "665db37",
+      "message": "feat: add video test campaign to report, dynamic campaign iteration",
+      "author": "shalombook"
+    },
+    {
+      "sha": "fc6306c",
+      "message": "chore: update DODO_PAYMENTS_API_KEY to live mode key",
+      "author": "shalombook"
+    },
+    {
+      "sha": "d248ed7",
+      "message": "fix: remove health.ts to stay within Vercel Hobby 12-function limit",
+      "author": "shalombook"
+    },
+    {
+      "sha": "da79968",
+      "message": "fix: add India campaign to meta ads Telegram report",
+      "author": "shalombook"
+    },
+    {
+      "sha": "23448c4",
+      "message": "chore: switch DODO_ENVIRONMENT to live_mode",
+      "author": "shalombook"
+    },
+    {
+      "sha": "895ea42",
+      "message": "fix: add $2 starter pack to frontend credit pack lists",
+      "author": "shalombook"
+    },
+    {
+      "sha": "57966d0",
+      "message": "fix: remove gate from landing pages, keep only on scenario detail",
+      "author": "shalombook"
+    },
+    {
+      "sha": "88dc8da",
+      "message": "chore: clean up preview file after in-app browser gate implementation",
+      "author": "shalombook"
+    },
+    {
+      "sha": "bae80c4",
+      "message": "feat: strip iOS Shortcuts query params on app load",
+      "author": "shalombook"
+    },
+    {
+      "sha": "9d744ec",
+      "message": "feat: add in-app browser gate to scenario detail + mic check",
+      "author": "shalombook"
+    },
+    {
+      "sha": "a6ea413",
+      "message": "feat: wrap all landing pages with InAppBrowserGate",
+      "author": "shalombook"
+    },
+    {
+      "sha": "32989ea",
+      "message": "chore: gitignore large media assets to prevent 4GB vercel uploads",
+      "author": "shalombook"
+    },
+    {
+      "sha": "334b8ea",
+      "message": "feat: add InAppBrowserGate blocker component",
+      "author": "shalombook"
+    },
+    {
+      "sha": "4d628c7",
+      "message": "feat: add in-app browser detection utility",
+      "author": "shalombook"
+    },
+    {
+      "sha": "2a6ccba",
+      "message": "chore: redeploy with live Dodo product IDs and PAYMENT_GATEWAY=dodo",
+      "author": "shalombook"
+    },
+    {
+      "sha": "79b876f",
+      "message": "chore: redeploy with live Dodo product IDs and PAYMENT_GATEWAY=dodo",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c3ae164",
+      "message": "docs: in-app browser gate implementation plan",
+      "author": "shalombook"
+    },
+    {
+      "sha": "05c719a",
+      "message": "docs: in-app browser gate design + HTML preview",
+      "author": "shalombook"
+    },
+    {
+      "sha": "faca113",
+      "message": "feat: add $2 starter pack + enable Dodo payments (#40)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "1f4f39a",
+      "message": "docs: session log 2026-04-23",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "fix: default payment gateway to dodo instead of lemonsqueezy",
+      "scene": "A confused lemon wearing a crown and holding a bag of money is being kicked out of the village by the knight. Villagers celebrate, throwing dodos (the bird) into the air.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The lemon is gone! Our payments are safe with the dodo now!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just a configuration change. We're using a different service."
+        }
+      ]
+    },
+    {
+      "title": "fix: remove health.ts to stay within Vercel Hobby 12-function limit",
+      "scene": "The Knight snips a tiny, pulsating file labeled 'health.ts' with scissors. A giant Vercel server looms in the background, menacingly displaying '13/12'. The '13' is flashing red. Removing the file makes it say '11/12'. Villagers celebrate.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He has appeased the server gods! We are under the limit again!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Removed an unused endpoint. Stayed within the function limit."
+        }
+      ]
+    },
+    {
+      "title": "chore: gitignore large media assets to prevent 4GB vercel uploads",
+      "scene": "The knight calmly adds a line to a `.gitignore` file. Behind him, a massive pile of media files (images, videos) labeled '4.1 GB' are being sucked into a black hole labeled 'Git Ignore'. Villagers gasp in awe.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The Great Un-Upload! He contained the bloat!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Prevented a Vercel deployment failure."
+        }
+      ]
+    },
+    {
+      "title": "23 commits. 7 features. 8 chores. 3 fixes. 5 docs.",
+      "scene": "Knight sitting exhausted, leaning against a stone wall. A villager is holding a baby, presenting it to the knight. The baby is wearing a tiny Dodo-themed hat. In the background, another villager is writing 'InAppBrowserGate' on a banner.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We named our child Dodo! And we're building a gate!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need a vacation."
+        }
+      ]
+    }
+  ]
+}
