@@ -1,0 +1,68 @@
+{
+  "date": "2026-04-25",
+  "commits": [
+    {
+      "sha": "1bd4d44",
+      "message": "Fix Telegram delivery in Meta ads report (#42)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Fix Telegram delivery in Meta ads report",
+      "scene": "A distraught villager is tied to a stake. A tiny telegram (a scroll) with the Meta logo is being burned in front of him. Knight calmly extinguishes the flames with a waterskin.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The reports...they said Telegram was failing! I was doomed!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was a reporting error. Telegrams were delivering fine."
+        }
+      ]
+    },
+    {
+      "title": "Fix Telegram delivery in Meta ads report",
+      "scene": "Villagers are offering golden statues of telegrams to the knight, while others are frantically checking their phones to see if the Telegrams went through.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The Meta overlords lied! Our messages are safe!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "The messages were always safe."
+        }
+      ]
+    },
+    {
+      "title": "Fix Telegram delivery in Meta ads report",
+      "scene": "The town crier is making an announcement on a scroll. He is followed by a parade of villagers overjoyed with telegrams.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Hear Ye! Hear Ye! The Telegrams deliver again! The Knight has saved us!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was a minor issue with how the ad reports were showing."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 1 ad report fixed. 0 villagers exploded.",
+      "scene": "The Knight sits on a crate looking bored, surrounded by grateful villagers building a shrine of telegrams, next to a statue of Mark Zuckerberg, who is crying tears of joy.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall celebrate this day as the Day of the Meta-Gram!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just data."
+        }
+      ]
+    }
+  ]
+}
