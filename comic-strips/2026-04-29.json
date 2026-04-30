@@ -1,0 +1,113 @@
+{
+  "date": "2026-04-29",
+  "commits": [
+    {
+      "sha": "5cc5dd7",
+      "message": "docs: add slideshow editor handoff with slide-by-slide scripts",
+      "author": "shalombook"
+    },
+    {
+      "sha": "6c8ba1d",
+      "message": "docs: add slideshow content bank with 10 hacks + 5 scenes",
+      "author": "shalombook"
+    },
+    {
+      "sha": "89b2d73",
+      "message": "docs: add finalized TikTok slideshow strategy",
+      "author": "shalombook"
+    },
+    {
+      "sha": "eba4f63",
+      "message": "Mark item 5 (AlanaByrd AskReddit) as visible - 2026-04-29",
+      "author": "Claude"
+    },
+    {
+      "sha": "89fb55e",
+      "message": "test: mark items 3-4 visible, move item 5 to today for cron test",
+      "author": "shalombook"
+    },
+    {
+      "sha": "d47d777",
+      "message": "docs: add slideshow format tracker for Codex handoff",
+      "author": "shalombook"
+    },
+    {
+      "sha": "f4aad3b",
+      "message": "feat: auto-redirect in-app browser users on landing pages (#44)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "63f0a8b",
+      "message": "docs: add in-app auto-redirect implementation plan",
+      "author": "shalombook"
+    },
+    {
+      "sha": "ea7fed2",
+      "message": "add reddit batch posting system with pre-written comments",
+      "author": "shalombook"
+    },
+    {
+      "sha": "bfcd023",
+      "message": "chore: reorganize docs into subdirectories + add TikTok slideshow scanner",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Mark item 5 (AlanaByrd AskReddit) as visible",
+      "scene": "Villagers on their knees, worshipping a glowing, floating number '5'. The knight stands nearby, looking bored.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The prophecy is fulfilled! Item 5 is visible!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's a database update. It's just setting a boolean to 'true'."
+        }
+      ]
+    },
+    {
+      "title": "feat: auto-redirect in-app browser users",
+      "scene": "A massive, snarling Minotaur (representing a confused in-app browser user) is charging toward the village. The Knight casually redirects it with a sign labeled 'Landing Page' turning it into a happy customer.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He tamed the browser beast! No more confusion!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just a simple redirect rule."
+        }
+      ]
+    },
+    {
+      "title": "add reddit batch posting system with pre-written comments",
+      "scene": "A giant printing press is churning out comments and posting them to an endless scroll of Reddit posts. Villagers are awestruck and reaching for the comments.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Our voices will be heard! On the internet!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just an automated posting script."
+        }
+      ]
+    },
+    {
+      "title": "10 commits. Slideshows. Redirects. Reddit.",
+      "scene": "The Knight is leaning against a stack of scrolls, looking tired. In the background, villagers are building a Reddit monument and creating a TikTok dance.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us rename the town Redirectville!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please don't."
+        }
+      ]
+    }
+  ]
+}
