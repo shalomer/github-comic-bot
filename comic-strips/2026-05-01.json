@@ -1,0 +1,72 @@
+{
+  "date": "2026-05-01",
+  "commits": [
+    {
+      "sha": "2d21f76",
+      "message": "chore: mark May 1 batch items as visible (IDs 6-11)",
+      "author": "Claude"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Mark May 1 batch items as visible",
+      "scene": "Villagers staring in awe at six newly visible, simple wooden crates labeled 'ID 6', 'ID 7', 'ID 8', 'ID 9', 'ID 10', and 'ID 11'. Knight stands beside them, looking bored.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The hidden crates... they are revealed!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just flipped the 'visible' flag on six database entries."
+        }
+      ]
+    },
+    {
+      "title": "Mark May 1 batch items as visible",
+      "scene": "A villager is on his knees, weeping, while pointing at crate 'ID 9'. Behind him, others are also crying and dramatically pointing. Knight is checking his nails, looking disinterested.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "I can SEE crate NINE! I thought it was lost forever!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "They were just set to 'invisible'."
+        }
+      ]
+    },
+    {
+      "title": "Mark May 1 batch items as visible",
+      "scene": "Two villagers are arguing passionately about which crate is the most beautiful. One points to 'ID 6', the other points to 'ID 11'. Knight stands nearby, sketching in a notepad.",
+      "bubbles": [
+        {
+          "speaker": "Villager 1",
+          "text": "ID Six is the most aesthetically pleasing crate I've ever laid eyes on!"
+        },
+        {
+          "speaker": "Villager 2",
+          "text": "You dare insult ID Eleven? It's a paragon of crate design!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "They're all the same shape."
+        }
+      ]
+    },
+    {
+      "title": "One Commit: Six Crates Visible. Souls Healed.",
+      "scene": "Knight is sitting on a pile of wooden crates, looking weary. In the background, villagers are erecting a small monument made of stacked crates. One villager is carving 'visible = true' into one of the crates.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall celebrate this day forever!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was a single commit."
+        }
+      ]
+    }
+  ]
+}
