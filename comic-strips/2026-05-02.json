@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-02",
+  "commits": [
+    {
+      "sha": "3c156a5",
+      "message": "chore: mark May 2 batch items 12-17 as visible",
+      "author": "Claude"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Mark May 2 batch items 12-17 as visible",
+      "scene": "A village marketplace. Empty stalls are suddenly filled with shining, perfect produce. Villagers are gasping and pointing.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The produce! It has returned!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just flipped a boolean."
+        }
+      ]
+    },
+    {
+      "title": "Mark May 2 batch items 12-17 as visible",
+      "scene": "A villager frantically trying to buy items 1-11, but they remain invisible and intangible. He stares in anguish as the knight looks on, stone-faced. The visible items 12-17 sparkle nearby.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "But I wanted item NUMBER 3!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Items 1-11 will become visible in a later batch."
+        }
+      ]
+    },
+    {
+      "title": "Mark May 2 batch items 12-17 as visible",
+      "scene": "The king and queen, on their knees, weeping tears of joy, as a humble stall merchant presents a glowing turnip (item 15).",
+      "bubbles": [
+        {
+          "speaker": "Queen",
+          "text": "A visible turnip! Our kingdom is saved!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was always there, just not visible."
+        }
+      ]
+    },
+    {
+      "title": "One commit. 6 items made visible.",
+      "scene": "The knight sits on a crate looking bored. Villagers are erecting a small, slightly crooked shrine dedicated to the boolean 'true'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us forever celebrate the visibility!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's going to rain tomorrow."
+        }
+      ]
+    }
+  ]
+}
