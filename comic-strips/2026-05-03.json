@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-03",
+  "commits": [
+    {
+      "sha": "038b5e8",
+      "message": "add reddit batch poster script",
+      "author": "Claude"
+    }
+  ],
+  "panels": [
+    {
+      "title": "add reddit batch poster script",
+      "scene": "The knight stands before a HUGE printing press-like machine labeled \"Reddit Batch Poster.\" The machine has gears and levers, and is spitting out scrolls (reddit posts) at high speed. Villagers are grabbing the scrolls and running off to proclaim the news. A few villagers are worshipping the machine.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The Great Scriptorium is complete! The news shall spread far and wide!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It automates posting to Reddit."
+        }
+      ]
+    },
+    {
+      "title": "add reddit batch poster script",
+      "scene": "A villager dressed as a town crier is frantically reading a scroll. His eyes are wide and he's sweating. Another villager is painting a giant banner showing the reddit logo.",
+      "bubbles": [
+        {
+          "speaker": "Villager Crier",
+          "text": "Hear ye! Hear ye! 'Fixed typo in migration script'!"
+        },
+        {
+          "speaker": "Other Villager",
+          "text": "The banner MUST be orange!"
+        }
+      ]
+    },
+    {
+      "title": "add reddit batch poster script",
+      "scene": "The knight stands next to the machine, looking slightly annoyed. The machine is now covered in flowers and ribbons. Villagers are taking selfies with it using primitive cameras.",
+      "bubbles": [
+        {
+          "speaker": "Villager taking selfie",
+          "text": "Cheese! Wait... is this thing secure?"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I...should probably add some rate limiting..."
+        }
+      ]
+    },
+    {
+      "title": "1 commit: Reddit batch poster enabled",
+      "scene": "The knight is leaning against a tree, looking exhausted. In the background, villagers are building a small shrine to the \"Reddit Batch Poster\" script. One villager is polishing a lever with a cloth.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Our voices will be heard!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I'm going to need a nap."
+        }
+      ]
+    }
+  ]
+}
