@@ -1,0 +1,208 @@
+{
+  "date": "2026-05-06",
+  "commits": [
+    {
+      "sha": "28c6246",
+      "message": "docs(sessions): add health-check tracker with 2026-05-06 pending-session deep dive",
+      "author": "shalombook"
+    },
+    {
+      "sha": "297a26a",
+      "message": "diagnose silent Vapi call failures via feedbackLogger (#47)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "48e2303",
+      "message": "docs(competitor-research): close TikTok page-discovery coverage matrix and scrape newly-found pages",
+      "author": "shalombook"
+    },
+    {
+      "sha": "3cc3f92",
+      "message": "chore: trigger redeploy to pick up new env vars (VITE_ONBOARDING_FUNNEL_ENABLED, DODO_SUBSCRIPTION_PRODUCT_ID, DODO_TRIAL_PERIOD_DAYS)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "e723eab",
+      "message": "fix(api): fold start-trial into payment.ts, drop onboarding.ts",
+      "author": "shalombook"
+    },
+    {
+      "sha": "461f196",
+      "message": "fix(api): consolidate /api/subscriptions into /api/onboarding",
+      "author": "shalombook"
+    },
+    {
+      "sha": "66e05a7",
+      "message": "fix(routing): update ScenarioOverviewPage CTA from /onboarding to /welcome",
+      "author": "shalombook"
+    },
+    {
+      "sha": "bea2b68",
+      "message": "docs: add onboarding+trial funnel tracker",
+      "author": "shalombook"
+    },
+    {
+      "sha": "b67d52e",
+      "message": "fix(payment): cast billing.country to Dodo CountryCode literal union",
+      "author": "shalombook"
+    },
+    {
+      "sha": "6a9eabc",
+      "message": "mark May 6 batch items visible after posting",
+      "author": "Claude"
+    },
+    {
+      "sha": "3d1d606",
+      "message": "feat(onboarding): register /onboarding route behind VITE_ONBOARDING_FUNNEL_ENABLED flag",
+      "author": "shalombook"
+    },
+    {
+      "sha": "e434f8b",
+      "message": "feat(onboarding): link onboarding session to user post-Google OAuth",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c1b923f",
+      "message": "feat(api): add /api/subscriptions start-trial endpoint",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c7e59a3",
+      "message": "feat(onboarding): add OnboardingFunnel page orchestrator",
+      "author": "shalombook"
+    },
+    {
+      "sha": "e46c276",
+      "message": "feat(onboarding): add all 22 step components",
+      "author": "shalombook"
+    },
+    {
+      "sha": "1fa4eca",
+      "message": "feat(onboarding): add API client, analytics helpers, and computePlan logic",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c3a1919",
+      "message": "feat(onboarding): add ScreenShell, ProgressBar, ChoiceCard, MultiChoiceCard, ConfidenceSlider, LoadingScreen, FounderCard",
+      "author": "shalombook"
+    },
+    {
+      "sha": "5e5751f",
+      "message": "feat(onboarding): add types + useOnboardingState hook with localStorage persistence",
+      "author": "shalombook"
+    },
+    {
+      "sha": "947875c",
+      "message": "chore: install @testing-library/react + jest-dom",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c48246a",
+      "message": "plan: onboarding funnel UI implementation (Plan #2)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "e7c15c2",
+      "message": "chore: document Dodo subscription product provisioning state",
+      "author": "shalombook"
+    },
+    {
+      "sha": "ed9a212",
+      "message": "feat(payment): handle Dodo subscription webhook events",
+      "author": "shalombook"
+    },
+    {
+      "sha": "a54752f",
+      "message": "feat(payment): implement Dodo subscription checkout + event parsing",
+      "author": "shalombook"
+    },
+    {
+      "sha": "f31455f",
+      "message": "feat(payment): add subscription methods to PaymentGateway interface",
+      "author": "shalombook"
+    },
+    {
+      "sha": "a07ae6c",
+      "message": "feat(api): add /api/onboarding endpoint (save-response + link-session)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "f7eda82",
+      "message": "feat(db): add subscriptions table for trial+paid tracking",
+      "author": "shalombook"
+    },
+    {
+      "sha": "1c0b52f",
+      "message": "feat(db): add onboarding_responses table",
+      "author": "shalombook"
+    },
+    {
+      "sha": "dde285a",
+      "message": "spike: live Dodo trial run results",
+      "author": "shalombook"
+    },
+    {
+      "sha": "76cdf87",
+      "message": "spike: SDK-aligned plan + ready-to-run spike script",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "fix(api): fold start-trial into payment.ts, drop onboarding.ts",
+      "scene": "Knight meticulously folds a tiny scroll labeled 'start-trial' into a larger scroll labeled 'payment.ts'. He then drops a HUGE scroll labeled 'onboarding.ts' into a fiery pit. Villagers watch in awe and terror.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He consolidated the scrolls of power! But... what becomes of onboarding.ts?"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Reduced code complexity. 1 less file to maintain."
+        }
+      ]
+    },
+    {
+      "title": "feat(onboarding): add all 22 step components",
+      "scene": "Villagers stare in wide-eyed horror as 22 identical, tiny stick figures with question marks on their faces march into the village, each carrying a tiny scroll. The knight looks on, unamused.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "22 steps! Will we ever escape onboarding?"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Each component represents a step in the onboarding funnel."
+        }
+      ]
+    },
+    {
+      "title": "spike: live Dodo trial run results",
+      "scene": "A graph showing Dodo trial results is projected onto the sky, causing mass hysteria. The graph is mostly flat, with a tiny blip upwards. Villagers are either celebrating wildly or weeping dramatically, pointing at the blip. The knight is holding a small Dodo bird, unimpressed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The Dodo lives! The trial run was a success!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was a preliminary test. The results are inconclusive."
+        }
+      ]
+    },
+    {
+      "title": "29 commits. 2 fixes. 13 features. 1 spike. 0 Dodos extinct.",
+      "scene": "The Knight is sitting on a stone bench, polishing his sword. In the background, villagers are unveiling a giant golden statue of a Dodo bird wearing a tiny graduation cap. A villager is naming their baby 'Funnel'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We celebrate the Onboarding Era!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just another sprint."
+        }
+      ]
+    }
+  ]
+}
