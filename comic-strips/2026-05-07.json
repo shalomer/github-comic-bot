@@ -1,0 +1,123 @@
+{
+  "date": "2026-05-07",
+  "commits": [
+    {
+      "sha": "b976c84",
+      "message": "feat(preview): rebuild onboarding-v2 to Cal AI 8-phase rhythm",
+      "author": "shalombook"
+    },
+    {
+      "sha": "6893a37",
+      "message": "fix(preview): rebuild feedback demo to mirror real product UI",
+      "author": "shalombook"
+    },
+    {
+      "sha": "8605a55",
+      "message": "fix(preview): collapse to 2 demo screens with locked copy",
+      "author": "shalombook"
+    },
+    {
+      "sha": "0043223",
+      "message": "docs: rewrite Cal AI comparison with verbatim screen text",
+      "author": "shalombook"
+    },
+    {
+      "sha": "01866c0",
+      "message": "fix(preview): strip demo screens to Cal AI brevity",
+      "author": "shalombook"
+    },
+    {
+      "sha": "3018ae9",
+      "message": "docs: side-by-side comparison of demo screen copy \u2014 Cal AI brevity vs our verbose attempt",
+      "author": "shalombook"
+    },
+    {
+      "sha": "fe0da26",
+      "message": "fix(preview): sharpen product demo copy \u2014 direct, specific, masculine",
+      "author": "shalombook"
+    },
+    {
+      "sha": "5017674",
+      "message": "feat(preview): static side-by-side preview of proposed v2 onboarding flow",
+      "author": "shalombook"
+    },
+    {
+      "sha": "1c2f5a5",
+      "message": "docs: side-by-side Cal AI vs vibeCoach funnel mapping",
+      "author": "shalombook"
+    },
+    {
+      "sha": "2f4ad5e",
+      "message": "fix(onboarding): cap funnel content width on desktop, frame as phone-column",
+      "author": "shalombook"
+    },
+    {
+      "sha": "3599885",
+      "message": "docs: add rationale + sources doc for the 22 onboarding questions",
+      "author": "shalombook"
+    },
+    {
+      "sha": "8495ec4",
+      "message": "chore: trigger redeploy for Dodo test-mode env flip",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "rebuild onboarding-v2 to Cal AI 8-phase rhythm",
+      "scene": "Villagers in a circle, doing synchronized interpretive dance in 8 distinct poses. They are crying with joy. The Knight stands in the center, looking slightly bewildered.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Eight phases of onboarding! It's... it's...perfect!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's based on another product's flow."
+        }
+      ]
+    },
+    {
+      "title": "strip demo screens to Cal AI brevity",
+      "scene": "The Knight uses a giant pair of scissors to cut massive scrolls of text into tiny pieces. Villagers collect the scraps like precious relics, sobbing.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He removed the fluff! Such... focus!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Less is more, I guess."
+        }
+      ]
+    },
+    {
+      "title": "cap funnel content width on desktop",
+      "scene": "A giant phone screen hovers over the village. It's about to crush them, but the Knight quickly shrinks the content inside to fit. The villagers cheer, narrowly avoiding disaster.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He saved us from the wide screen!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was overflowing. Now it doesn't."
+        }
+      ]
+    },
+    {
+      "title": "12 commits. Onboarding refined. Funnel contained.",
+      "scene": "The Knight sits on a stone bench, polishing his sword with a cloth. A villager is carving his likeness in wood. Another is naming a baby 'Cal'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall call him Cal, bringer of brevity!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just wanted to make it look nice."
+        }
+      ]
+    }
+  ]
+}
