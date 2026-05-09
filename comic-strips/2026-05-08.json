@@ -1,0 +1,108 @@
+{
+  "date": "2026-05-08",
+  "commits": [
+    {
+      "sha": "c4970bc",
+      "message": "test(scripts): add API-level test script for Plan 3 subscription credit flow",
+      "author": "shalombook"
+    },
+    {
+      "sha": "510a554",
+      "message": "feat(payment): grant subscription credits on trial/activate/renew (Plan 3) (#49)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "68e9f05",
+      "message": "docs(sessions): tracker bootstrap + design specs for issues #20 and #21",
+      "author": "shalombook"
+    },
+    {
+      "sha": "d75fe8c",
+      "message": "docs: status recap of onboarding funnel work \u2014 entry point for new sessions",
+      "author": "shalombook"
+    },
+    {
+      "sha": "a8e5ee5",
+      "message": "feat(onboarding): swap live /onboarding to v2 (Cal AI rhythm, 27 screens)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "8b05367",
+      "message": "fix(preview): welcome headline -> 'Get good at talking to women. Practice with AI.'",
+      "author": "shalombook"
+    },
+    {
+      "sha": "bbb4920",
+      "message": "fix(preview): simplify welcome headline to 'Talk to AI women.'",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c11b5a4",
+      "message": "docs: mark all preview-v2 review items as done",
+      "author": "shalombook"
+    },
+    {
+      "sha": "860b76f",
+      "message": "fix(preview): round 2 review fixes",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "fix(preview): welcome headline -> 'Get good at talking to women. Practice with AI.'",
+      "scene": "A town crier stands on a box, ringing a bell. Villagers are huddled around him, looking worried. A large scroll reads: 'Welcome to...uh...' Knight stands to the side, looking unimpressed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The headline... it's too long! No one will be able to read it!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I made it more descriptive."
+        }
+      ]
+    },
+    {
+      "title": "feat(onboarding): swap live /onboarding to v2 (Cal AI rhythm, 27 screens)",
+      "scene": "Knight presses a large red button labeled 'ONBOARDING V2'. Behind him, the entire village is picked up and placed into a complex, 27-room labyrinth. Villagers scream in delight and confusion.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "So many rooms! So many choices! My life has meaning now!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It\u2019s a new user flow."
+        }
+      ]
+    },
+    {
+      "title": "feat(payment): grant subscription credits on trial/activate/renew (Plan 3) (#49)",
+      "scene": "A giant golden coin with 'PLAN 3' engraved on it descends from the heavens, showering the village with smaller coins. Villagers scramble to collect them.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Free credits! We are rich! We shall build a monument to Plan 3!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It just adds credits on subscription events."
+        }
+      ]
+    },
+    {
+      "title": "9 commits. 3 features. 3 fixes. 1 onboarding revamp.",
+      "scene": "Knight leaning against a stone wall, looking tired. Villagers are erecting a giant statue of a calendar, with the inscription 'Cal AI Rhythm'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us celebrate the rhythm of Cal AI forever!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need coffee."
+        }
+      ]
+    }
+  ]
+}
