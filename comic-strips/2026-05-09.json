@@ -1,0 +1,83 @@
+{
+  "date": "2026-05-09",
+  "commits": [
+    {
+      "sha": "7a4404e",
+      "message": "feat(call): freeze flash-tip lands in production CallSquad",
+      "author": "shalombook"
+    },
+    {
+      "sha": "1ea7ba2",
+      "message": "feat(onboarding): add /onboarding-free variant for India activation test (#48)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "5b2298f",
+      "message": "feat(preview): flash tip now appears as centered overlay, not in-place size jump",
+      "author": "shalombook"
+    },
+    {
+      "sha": "0c6e0fd",
+      "message": "feat(preview): add /preview/freeze-flash UI preview + Issue #11 design plans",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat(call): freeze flash-tip lands in production CallSquad",
+      "scene": "Villagers in medieval armor celebrate wildly around a frozen block of ice containing a flickering, pixelated 'flash tip' fairy. Knight stands nearby, looking unimpressed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The dreaded Flash Tip is finally imprisoned!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was just a minor visual annoyance."
+        }
+      ]
+    },
+    {
+      "title": "feat(onboarding): add /onboarding-free variant for India activation test",
+      "scene": "A map of India is being unfurled from the castle balcony. A single villager faints dramatically at the sight of it. The knight stands nearby, arms crossed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A new path! For...India!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's an A/B test."
+        }
+      ]
+    },
+    {
+      "title": "feat(preview): flash tip now appears as centered overlay",
+      "scene": "Villagers gasp and point at a floating, centered 'Flash Tip' icon projected onto the clouds. A previously off-center, smaller icon lies shattered on the ground.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "It's... it's perfectly centered now!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's a CSS change."
+        }
+      ]
+    },
+    {
+      "title": "4 commits. Flash tips conquered. India on board.",
+      "scene": "The knight sits wearily on a crate. In the background, the villagers are erecting a giant statue of a centered flash tip overlay.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us celebrate the glorious centering!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need a vacation."
+        }
+      ]
+    }
+  ]
+}
