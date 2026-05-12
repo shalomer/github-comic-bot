@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-11",
+  "commits": [
+    {
+      "sha": "eb5dd0e",
+      "message": "fix(seo): give /about, /terms, /privacy, /contact their own canonical signals",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Fix SEO: Unique Canonical URLs",
+      "scene": "A villager is chained to a giant stone tablet labeled 'DUPLICATE CONTENT'. The knight effortlessly snaps the chains with a flick of his wrist.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "I am free! The search engines finally see me!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Each page now has a proper canonical tag."
+        }
+      ]
+    },
+    {
+      "title": "The About page is real!",
+      "scene": "A villager stares in awe at a newly erected sign that reads '/about'. Angels descend from the heavens, playing harps.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "It exists! The mythical About page is real!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It always existed."
+        }
+      ]
+    },
+    {
+      "title": "Terms are clearly defined!",
+      "scene": "Two lawyers are dueling with swords over an ambiguous contract. The knight replaces the contract with a clearly written document. Lawyers hug and weep.",
+      "bubbles": [
+        {
+          "speaker": "Lawyer 1",
+          "text": "The terms... they are understandable!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Now each document has its own URL."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 4 pages indexed. Sanity restored.",
+      "scene": "The knight is polishing his sword, looking bored. In the background, villagers are holding a parade with floats representing the /about, /terms, /privacy, and /contact pages.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall celebrate the uniqueness of our URLs!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It prevents search engine penalization."
+        }
+      ]
+    }
+  ]
+}
