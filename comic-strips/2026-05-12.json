@@ -1,0 +1,157 @@
+{
+  "date": "2026-05-12",
+  "commits": [
+    {
+      "sha": "a06656f",
+      "message": "fix(onboarding): jump to trial-start screen when Dodo redirects back",
+      "author": "shalombook"
+    },
+    {
+      "sha": "4da551d",
+      "message": "chore(scripts): commit accumulated marketing + ops scripts",
+      "author": "shalombook"
+    },
+    {
+      "sha": "fc0fa07",
+      "message": "docs(marketing): commit accumulated marketing markdown to main",
+      "author": "shalombook"
+    },
+    {
+      "sha": "7f756ae",
+      "message": "docs(sessions): mark Issue #11 handoff as RESOLVED, demote to history",
+      "author": "shalombook"
+    },
+    {
+      "sha": "6834041",
+      "message": "docs(tracker): mark Issue #11 RESOLVED, defer P2/P4 pending data",
+      "author": "shalombook"
+    },
+    {
+      "sha": "1552258",
+      "message": "docs(tracker): park Issue #12, note Indian-voice scenario as the fix path",
+      "author": "shalombook"
+    },
+    {
+      "sha": "956191b",
+      "message": "docs(tracker): reclassify #20/#21 as deferred features, park #13",
+      "author": "shalombook"
+    },
+    {
+      "sha": "9de2698",
+      "message": "chore: trigger redeploy to pick up DODO_SUBSCRIPTION_PRODUCT_ID_IN env var",
+      "author": "shalombook"
+    },
+    {
+      "sha": "ee06671",
+      "message": "feat(onboarding): add /onboarding-in variant for India paid (\u20b9349/mo, 1 credit) (#50)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "bcb930a",
+      "message": "docs(tracker): mark Issue #11 P3 as user-verified 2026-05-12",
+      "author": "shalombook"
+    },
+    {
+      "sha": "72cc0f1",
+      "message": "docs(tracker): mark Issue #11 P1 as shipped in Issues Summary row",
+      "author": "shalombook"
+    },
+    {
+      "sha": "c6ec7cf",
+      "message": "feat(vapi): ship Issue #11 P1 opener changes across 7 scenarios",
+      "author": "shalombook"
+    },
+    {
+      "sha": "f50a032",
+      "message": "feat(onboarding): route ad LP traffic through /onboarding-free, exit on the right scenario",
+      "author": "shalombook"
+    },
+    {
+      "sha": "56d3da2",
+      "message": "fix(onboarding): shrink welcome demo image so it fits without scrolling",
+      "author": "shalombook"
+    },
+    {
+      "sha": "0f581af",
+      "message": "fix(onboarding): increase chart container height so '8 weeks' label isn't clipped",
+      "author": "shalombook"
+    },
+    {
+      "sha": "16e32c4",
+      "message": "docs(sessions): Issue #11 session handoff + tracker update for P3 ship",
+      "author": "shalombook"
+    },
+    {
+      "sha": "46bd5a1",
+      "message": "docs: session log 2026-05-12",
+      "author": "shalombook"
+    },
+    {
+      "sha": "e5f7f05",
+      "message": "docs(onboarding-threads): consolidate as canonical tracker for new conversations",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "fix(onboarding): shrink welcome demo image so it fits without scrolling",
+      "scene": "A villager glued to a giant demo phone, scrolling endlessly through an onboarding screen. The knight calmly adjusts the image size with two fingers. The villager explodes with joy.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "It... it fits! I can see the whole image!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Reduced image height by 32 pixels."
+        }
+      ]
+    },
+    {
+      "title": "feat(onboarding): add /onboarding-in variant for India paid (\u20b9349/mo, 1 credit)",
+      "scene": "The knight presents a new golden signpost pointing towards '/onboarding-in'. Villagers are bowing down to it, throwing rupees in the air. One villager is on the ground trying to calculate if he can afford it.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A new path! And it only costs 349 rupees a month!"
+        },
+        {
+          "speaker": "Other villager",
+          "text": "Is that one credit worth it?"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's a localized onboarding flow."
+        }
+      ]
+    },
+    {
+      "title": "chore: trigger redeploy to pick up DODO_SUBSCRIPTION_PRODUCT_ID_IN env var",
+      "scene": "A giant lever labeled 'REDEPLOY' is pulled by the knight. The entire kingdom shakes as the village upgrades from dirt road to cobblestone, and some villagers cry. A small bird labeled 'DODO' flies away, unharmed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The Great Redeployment! Our lives have been changed!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just updating an environment variable."
+        }
+      ]
+    },
+    {
+      "title": "18 commits. 4 onboarding features. 3 onboarding fixes. 1 DODO.",
+      "scene": "Knight sitting exhausted in a wooden chair, holding a cup of tea. Villagers are erecting a monument made of old onboarding screens. One villager is naming his baby 'Dodo'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall never forget the onboarding era!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need a vacation."
+        }
+      ]
+    }
+  ]
+}
