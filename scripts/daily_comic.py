@@ -24,8 +24,27 @@ from typing import Optional
 
 import requests
 from google import genai
+from google.genai import errors as genai_errors
 from google.genai import types
 from PIL import Image
+
+
+def call_gemini_with_retry(fn, *, label: str, max_attempts: int = 5):
+    """Call a Gemini SDK function, retrying on 429 RESOURCE_EXHAUSTED with exponential backoff.
+
+    Gemini free-tier quotas reset on a per-minute basis, so a 10s/20s/40s/80s/160s
+    schedule (~5 min total) usually clears transient spikes without failing the daily run.
+    """
+    delay = 10
+    for attempt in range(1, max_attempts + 1):
+        try:
+            return fn()
+        except genai_errors.ClientError as e:
+            if e.code != 429 or attempt == max_attempts:
+                raise
+            print(f"  {label}: 429 RESOURCE_EXHAUSTED (attempt {attempt}/{max_attempts}), sleeping {delay}s...")
+            time.sleep(delay)
+            delay *= 2
 
 
 # ---------------------------------------------------------------------------
@@ -206,13 +225,16 @@ def generate_script(commits: list[dict], api_key: str) -> list[dict]:
         f"Create a 4-panel comic strip. Return ONLY the JSON array."
     )
 
-    response = client.models.generate_content(
-        model=GEMINI_TEXT_MODEL,
-        contents=user_msg,
-        config=types.GenerateContentConfig(
-            system_instruction=SYSTEM_PROMPT,
-            response_mime_type="application/json",
+    response = call_gemini_with_retry(
+        lambda: client.models.generate_content(
+            model=GEMINI_TEXT_MODEL,
+            contents=user_msg,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                response_mime_type="application/json",
+            ),
         ),
+        label="script generation",
     )
 
     text = response.text.strip()
@@ -252,12 +274,15 @@ def generate_panel_image(panel: dict, output_path: Path, api_key: str) -> bool:
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            response = client.models.generate_content(
-                model=GEMINI_IMAGE_MODEL,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_modalities=["IMAGE", "TEXT"],
+            response = call_gemini_with_retry(
+                lambda: client.models.generate_content(
+                    model=GEMINI_IMAGE_MODEL,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_modalities=["IMAGE", "TEXT"],
+                    ),
                 ),
+                label=f"panel image '{panel['title'][:40]}'",
             )
 
             for part in response.candidates[0].content.parts:
