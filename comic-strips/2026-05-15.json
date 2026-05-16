@@ -1,0 +1,108 @@
+{
+  "date": "2026-05-15",
+  "commits": [
+    {
+      "sha": "31a7a75",
+      "message": "docs(onboarding-threads): refresh tracker with full 2026-05-15/16 state",
+      "author": "shalombook"
+    },
+    {
+      "sha": "1cf6345",
+      "message": "feat(pixel): fire Purchase event on trial mandate capture",
+      "author": "shalombook"
+    },
+    {
+      "sha": "18f9009",
+      "message": "feat(onboarding): rename /onboarding \u2192 /onboarding-us + fire Pixel StartTrial",
+      "author": "shalombook"
+    },
+    {
+      "sha": "515d2a0",
+      "message": "fix(payment): use payment_method_id (not payment_id) to detect mandate capture",
+      "author": "shalombook"
+    },
+    {
+      "sha": "33ef09a",
+      "message": "fix(payment): grant trial credit only after Dodo mandate is captured",
+      "author": "shalombook"
+    },
+    {
+      "sha": "4db57b5",
+      "message": "fix(payment): make trial credit grant idempotent per user, not per subscription",
+      "author": "shalombook"
+    },
+    {
+      "sha": "9a0e41d",
+      "message": "fix(payment): default billing_country from plan so Dodo shows local currency",
+      "author": "shalombook"
+    },
+    {
+      "sha": "07eb9de",
+      "message": "chore: redeploy to pick up cleaned Dodo live API key (no trailing \\n)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "aa6cbaf",
+      "message": "debug(payment): surface start-trial error detail in 500 response",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "fix(payment): use payment_method_id (not payment_id)",
+      "scene": "A befuddled wizard (representing the payment system) is juggling two glowing orbs labeled 'payment_id' and 'payment_method_id'. The orb 'payment_id' slips and shatters on the ground. The knight points calmly at the remaining 'payment_method_id' orb.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He chose the RIGHT ID! Our gold is safe!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's more secure this way."
+        }
+      ]
+    },
+    {
+      "title": "chore: redeploy to pick up cleaned Dodo live API key (no trailing \\n)",
+      "scene": "A group of monks is painstakingly copying an API key onto a giant stone tablet. The knight wipes a single newline character off the tablet with a small cloth. The monks gasp.",
+      "bubbles": [
+        {
+          "speaker": "Monk",
+          "text": "The sacred key... it's PERFECT now!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Removed a stray newline."
+        }
+      ]
+    },
+    {
+      "title": "fix(payment): default billing_country from plan so Dodo shows local currency",
+      "scene": "The marketplace is in chaos, with vendors offering goods in strange, foreign currencies. The knight gently adjusts a sign above the marketplace, and now all prices are displayed in the local currency (gold coins). Villagers cheer.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Now I can afford bread again!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's about displaying the correct currency."
+        }
+      ]
+    },
+    {
+      "title": "9 commits. 4 payment fixes. 1 trailing newline vanquished.",
+      "scene": "The knight is leaning against a wall, looking tired but impassive. In the background, villagers are erecting a small statue of a backslash followed by the letter 'n', both with wings.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall always remember the Great Newline Removal!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just another day at the office."
+        }
+      ]
+    }
+  ]
+}
