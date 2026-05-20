@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-19",
+  "commits": [
+    {
+      "sha": "0dae68a",
+      "message": "chore(ci): disable meta-ads-report cron pending MCP/CLI migration",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Disable meta-ads-report cron",
+      "scene": "A giant clock tower with a large bell inside is stopped. Cobwebs fill the clock face. Knight stands below, holding a wrench, looking bored. Villagers are panicking, holding their heads.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The ads... they're GONE! Is this the end of capitalism?"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just disabled temporarily."
+        }
+      ]
+    },
+    {
+      "title": "Disable meta-ads-report cron",
+      "scene": "A tiny gremlin labeled 'meta-ads-report cron' is being evicted from a cozy little house. The knight is holding an eviction notice. The gremlin is crying.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The reporting... it rests. He has spared us from the numbers!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "MCP/CLI migration."
+        }
+      ]
+    },
+    {
+      "title": "Disable meta-ads-report cron",
+      "scene": "Villagers are throwing a funeral procession for a spreadsheet. They are carrying it in a coffin draped with a black cloth. The knight watches, arms crossed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall never forget the pivot tables! The VLOOKUP!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It will be back later."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 1 disable. 0 problems.",
+      "scene": "Knight sitting on a small stool looking utterly bored. In the background, villagers are erecting a small shrine dedicated to the 'pause' button. One villager is carving a tiny pause symbol.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall call this day... 'The Great Cron Pause'!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need a coffee."
+        }
+      ]
+    }
+  ]
+}
