@@ -1,0 +1,140 @@
+{
+  "date": "2026-05-20",
+  "commits": [
+    {
+      "sha": "454fe1e",
+      "message": "feat(payment): drop IN subscription price from \u20b9349 to \u20b999/month (#58)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "f414bf7",
+      "message": "fix(onboarding): validate birthdate range, reject 18+ and pre-1926",
+      "author": "shalombook"
+    },
+    {
+      "sha": "211d4da",
+      "message": "fix(payment): block duplicate trials per user+plan to stop credit accumulation (#56)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "e088948",
+      "message": "fix(onboarding): mark profile.onboarding_completed when funnel finishes (#55)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "8d6cb24",
+      "message": "fix(onboarding): gate trial-success UI behind confirm-trial result (#54)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "675b4d7",
+      "message": "feat(onboarding): capture V2 quiz answers (lift state to shared store)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "87b996c",
+      "message": "cleanup: stop shipping orphan competitor-review MDs to prod",
+      "author": "shalombook"
+    },
+    {
+      "sha": "9c447b7",
+      "message": "docs(onboarding-threads): log 2026-05-20 session (Meta CLI migration + US tweaks)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "5d80ec0",
+      "message": "docs(meta-ads): correct Vercel env claim + remove resolved TODOs",
+      "author": "shalombook"
+    },
+    {
+      "sha": "37ad717",
+      "message": "fix(onboarding): restore /api/onboarding endpoint, free a slot via /research",
+      "author": "shalombook"
+    },
+    {
+      "sha": "badf5cf",
+      "message": "fix(onboarding): fire trackOauthCompleted independently of linkSession",
+      "author": "shalombook"
+    },
+    {
+      "sha": "dd313be",
+      "message": "docs(meta-ads): correct Vercel env claim + remove resolved TODOs",
+      "author": "shalombook"
+    },
+    {
+      "sha": "b529de4",
+      "message": "chore(meta-ads): migrate report to official Meta CLI",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Drop IN subscription price to \u20b999/month",
+      "scene": "A medieval town square. Villagers are throwing money into the air and dancing. A merchant is weeping with joy. The knight stands to the side, unimpressed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The king lowered the price! We can all afford to read scrolls now!"
+        },
+        {
+          "speaker": "Merchant",
+          "text": "My scroll business is saved!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's a price change."
+        }
+      ]
+    },
+    {
+      "title": "Reject birthdates 18+ and pre-1926",
+      "scene": "A courtroom scene. An elderly villager with a cane is being dragged away by guards, protesting. A baby is similarly escorted away.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "But I was born in 1900! I demand to sign up!"
+        },
+        {
+          "speaker": "Guard",
+          "text": "Sorry sir, the Knight fixed the age validation. No ancient scrolls for you."
+        },
+        {
+          "speaker": "Knight",
+          "text": "The form now uses a date range."
+        }
+      ]
+    },
+    {
+      "title": "Stop duplicate trials per user",
+      "scene": "A massive pile of gold coins is collapsing. The knight stands in front of it, holding a single coin. Villagers are panicking.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The great gold glitch is over! No more infinite trials!"
+        },
+        {
+          "speaker": "Villager",
+          "text": "I was gonna be rich!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Fixed credit accumulation with a database constraint."
+        }
+      ]
+    },
+    {
+      "title": "13 commits. Trials fixed. Prices lowered. Ages validated.",
+      "scene": "The knight sits on a crate, polishing his sword, looking tired. In the background, villagers are building a statue of a calendar with '1926' prominently displayed. A merchant is handing out free scrolls.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Let us celebrate the year of reasonable birthdates!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I also removed some obsolete documentation."
+        }
+      ]
+    }
+  ]
+}
