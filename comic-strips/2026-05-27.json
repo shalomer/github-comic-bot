@@ -1,0 +1,98 @@
+{
+  "date": "2026-05-27",
+  "commits": [
+    {
+      "sha": "9461d67",
+      "message": "docs(marketing): add video editor SOP for ad creative briefs",
+      "author": "shalombook"
+    },
+    {
+      "sha": "b50e6db",
+      "message": "chore(deps): npm audit fix for non-breaking vulnerabilities (#65)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "8459eb2",
+      "message": "feat(scripts): hyperlink Recent posts items in Instagram intern report (#64)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "a87c5da",
+      "message": "docs(infra): correct CLI system user name + document Instagram scopes (#63)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "314fa5e",
+      "message": "fix(scripts): truncate caption by code points to avoid splitting emojis (#62)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "7af080b",
+      "message": "fix(scripts): split Instagram insights call to satisfy metric_type=total_value (#61)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "c50674e",
+      "message": "fix(ci): migrate instagram intern report to long-lived ACCESS_TOKEN (#60)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "chore(deps): npm audit fix",
+      "scene": "A gigantic, slimy green bug labeled 'VULNERABILITY' menaces the village. The knight, with a bored expression, squashes it with a tiny hammer labeled 'npm audit fix'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The kingdom is safe! Our supply chain is secure!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was a dev dependency."
+        }
+      ]
+    },
+    {
+      "title": "truncate caption by code points",
+      "scene": "A villager is trying to send a message via carrier pigeon, but only half the emojis get through! The knight calmly adjusts the pigeon's satchel, now displaying complete emojis.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The emojis... they are whole again!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I made sure we counted the code points correctly."
+        }
+      ]
+    },
+    {
+      "title": "split Instagram insights call",
+      "scene": "A very large scroll labeled 'Instagram Insights' is so big it's bending space around it. Knight slices it in half with his sword.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "It fits! It finally fits!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It needed to satisfy metric_type=total_value."
+        }
+      ]
+    },
+    {
+      "title": "7 commits. Bugs fixed. SOP added. Reports hyperlinked.",
+      "scene": "The knight, looking utterly drained, sits on a rock sharpening his sword. In the background, villagers are draping a banner with 'ACCESS_TOKEN' in huge letters across the town hall.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "All hail Sir Knight, protector of Instagram reports!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just doing my job."
+        }
+      ]
+    }
+  ]
+}
