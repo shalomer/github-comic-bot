@@ -29,6 +29,60 @@ from google.genai import types
 from PIL import Image
 
 
+def openai_generate_script(system_prompt: str, commit_block: str, api_key: str) -> list[dict]:
+    """Generate the 4-panel script via OpenAI. Returns the panel list directly.
+
+    OpenAI's json_object mode requires a top-level object, so we ask for
+    {"panels": [...]} explicitly and unwrap.
+    """
+    user_msg = (
+        f"{commit_block}\n\n"
+        'Return ONLY this exact JSON shape: {"panels": [P1, P2, P3, P4]} where '
+        "the panels array contains EXACTLY 4 panel objects. Each panel has keys: "
+        "title, scene, bubbles (a list of {speaker, text}). If there are fewer "
+        "than 3 commits, invent extra reaction/aftermath panels to reach 4."
+    )
+    resp = requests.post(
+        "https://api.openai.com/v1/chat/completions",
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        json={
+            "model": OPENAI_TEXT_MODEL,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_msg},
+            ],
+            "response_format": {"type": "json_object"},
+        },
+        timeout=120,
+    )
+    resp.raise_for_status()
+    text = resp.json()["choices"][0]["message"]["content"]
+    parsed = json.loads(text)
+    panels = parsed.get("panels") if isinstance(parsed, dict) else None
+    if not isinstance(panels, list):
+        raise ValueError(f"OpenAI returned unexpected shape: {text[:200]}")
+    return panels
+
+
+def openai_generate_image(prompt: str, output_path: Path, api_key: str) -> bool:
+    """gpt-image-1 generation. Used as a Gemini image fallback."""
+    resp = requests.post(
+        "https://api.openai.com/v1/images/generations",
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        json={
+            "model": OPENAI_IMAGE_MODEL,
+            "prompt": prompt,
+            "n": 1,
+            "size": "1024x1024",
+            "quality": "low",
+        },
+        timeout=180,
+    )
+    resp.raise_for_status()
+    output_path.write_bytes(base64.b64decode(resp.json()["data"][0]["b64_json"]))
+    return True
+
+
 def call_gemini_with_retry(fn, *, label: str, max_attempts: int = 5):
     """Call a Gemini SDK function, retrying on 429 RESOURCE_EXHAUSTED with exponential backoff.
 
@@ -41,6 +95,10 @@ def call_gemini_with_retry(fn, *, label: str, max_attempts: int = 5):
             return fn()
         except genai_errors.ClientError as e:
             if e.code != 429 or attempt == max_attempts:
+                raise
+            # Quota depletion is permanent for the rest of the day — don't burn retries.
+            if "depleted" in str(e).lower():
+                print(f"  {label}: prepayment credits depleted, skipping retries")
                 raise
             print(f"  {label}: 429 RESOURCE_EXHAUSTED (attempt {attempt}/{max_attempts}), sleeping {delay}s...")
             time.sleep(delay)
@@ -56,6 +114,10 @@ COMIC_DIR = Path(__file__).resolve().parent.parent / "comic-strips"
 
 GEMINI_TEXT_MODEL = "gemini-2.0-flash"
 GEMINI_IMAGE_MODEL = "gemini-2.5-flash-image"
+
+# OpenAI is used as a fallback when Gemini returns 429 RESOURCE_EXHAUSTED.
+OPENAI_TEXT_MODEL = "gpt-4o-mini"
+OPENAI_IMAGE_MODEL = "gpt-image-1"
 
 IMAGE_STYLE_PREFIX = (
     "Cartoon style, warm tones (coral, gold, cream), bold outlines, "
@@ -220,32 +282,38 @@ def generate_script(commits: list[dict], api_key: str) -> list[dict]:
     commit_list = "\n".join(
         f"- [{c['sha']}] {c['message']}" for c in commits
     )
+    commit_block = f"Here are today's {len(commits)} commits:\n\n{commit_list}"
     user_msg = (
-        f"Here are today's {len(commits)} commits:\n\n{commit_list}\n\n"
-        f"Create a 4-panel comic strip. Return ONLY the JSON array."
+        f"{commit_block}\n\nCreate a 4-panel comic strip. Return ONLY the JSON array."
     )
 
-    response = call_gemini_with_retry(
-        lambda: client.models.generate_content(
-            model=GEMINI_TEXT_MODEL,
-            contents=user_msg,
-            config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_PROMPT,
-                response_mime_type="application/json",
+    try:
+        response = call_gemini_with_retry(
+            lambda: client.models.generate_content(
+                model=GEMINI_TEXT_MODEL,
+                contents=user_msg,
+                config=types.GenerateContentConfig(
+                    system_instruction=SYSTEM_PROMPT,
+                    response_mime_type="application/json",
+                ),
             ),
-        ),
-        label="script generation",
-    )
+            label="script generation",
+        )
+        text = response.text.strip()
+        # Strip markdown code fences if present
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1]
+            text = text.rsplit("```", 1)[0]
+            text = text.strip()
+        panels = json.loads(text)
+    except genai_errors.ClientError as e:
+        openai_key = os.environ.get("OPENAI_API_KEY")
+        if e.code == 429 and openai_key:
+            print(f"  Gemini exhausted; falling back to OpenAI {OPENAI_TEXT_MODEL}")
+            panels = openai_generate_script(SYSTEM_PROMPT, commit_block, openai_key)
+        else:
+            raise
 
-    text = response.text.strip()
-
-    # Strip markdown code fences if present
-    if text.startswith("```"):
-        text = text.split("\n", 1)[1]
-        text = text.rsplit("```", 1)[0]
-        text = text.strip()
-
-    panels = json.loads(text)
     assert isinstance(panels, list) and len(panels) == 4, f"Expected 4 panels, got {len(panels)}"
     return panels
 
@@ -295,6 +363,18 @@ def generate_panel_image(panel: dict, output_path: Path, api_key: str) -> bool:
                     return True
 
             print(f"  No image in response (attempt {attempt + 1})")
+        except genai_errors.ClientError as e:
+            openai_key = os.environ.get("OPENAI_API_KEY")
+            if e.code == 429 and openai_key:
+                print(f"  Gemini exhausted; falling back to OpenAI {OPENAI_IMAGE_MODEL}")
+                try:
+                    openai_generate_image(prompt, output_path, openai_key)
+                    print(f"  Saved: {output_path.name}")
+                    return True
+                except Exception as oe:
+                    print(f"  OpenAI fallback error: {oe}")
+                    return False
+            print(f"  Error (attempt {attempt + 1}): {e}")
         except Exception as e:
             print(f"  Error (attempt {attempt + 1}): {e}")
 

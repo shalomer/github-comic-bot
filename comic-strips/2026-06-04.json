@@ -1,0 +1,68 @@
+{
+  "date": "2026-06-04",
+  "commits": [
+    {
+      "sha": "3866677",
+      "message": "feat(capi): self-hosted Meta Conversions API for /sales funnel (#73)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat: self-hosted Meta Conversions API for /sales funnel",
+      "scene": "A shiny new castle with a large banner reading 'Meta Conversions API' is erected in the village square. Villagers go wild, throwing confetti and holding torches while one villager faintly clutches a book titled 'Sales Strategies.' The knight stands calmly in front, adjusting his sword, looking unimpressed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The sales will flow like wine! Our businesses are saved!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just an API."
+        }
+      ]
+    },
+    {
+      "title": "Feature: villagers rejoice about sales",
+      "scene": "Villagers dance around a fountain shaped like a dollar sign, spraying each other with water. Some have painted faces and are holding glittery signs saying 'Sales!' while the knight stands stoically in the background, arms crossed.",
+      "bubbles": [
+        {
+          "speaker": "Other villager",
+          "text": "We'll be the wealthiest village! All thanks to the knight!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I didn't raise your taxes."
+        }
+      ]
+    },
+    {
+      "title": "Rumors of a marketing meeting",
+      "scene": "A worried group of villagers huddles around a giant glowing scroll that reads 'Marketing Meeting Tomorrow!' Some are biting their nails while others clutch their heads in anguish. The knight leans against a lamppost, looking slightly annoyed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "What if they ask us for more conversions?!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Just tell them you have none."
+        }
+      ]
+    },
+    {
+      "title": "3 commits. 1 feature. 0 taxes raised.",
+      "scene": "Knight sitting on a pile of gold coins, looking exhausted. Villagers are busy building a large statue of the knight holding a laptop, one villager is fitting a crown on it.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall name our firstborn conversion-api!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "...it was just an API."
+        }
+      ]
+    }
+  ]
+}

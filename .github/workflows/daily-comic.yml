@@ -24,6 +24,7 @@ jobs:
       - name: Generate comic
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
           TARGET_REPO: ${{ vars.TARGET_REPO }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
