@@ -1,0 +1,112 @@
+{
+  "date": "2026-08-19",
+  "commits": [
+    {
+      "sha": "8a11c05",
+      "message": "fix(iap): a refund restores what actually left the balance, not what Apple revoked",
+      "author": "shalombook"
+    },
+    {
+      "sha": "f6ec9e1",
+      "message": "fix(iap): correct refund units, serialise against races, support repeated partials",
+      "author": "shalombook"
+    },
+    {
+      "sha": "f57d0ad",
+      "message": "fix(iap): make the Apple grant atomic and get refund semantics right",
+      "author": "shalombook"
+    },
+    {
+      "sha": "fd6dd0e",
+      "message": "fix(iap): recover stranded orders, require the buyer stamp, redeliver lost refunds",
+      "author": "shalombook"
+    },
+    {
+      "sha": "f665857",
+      "message": "fix(iap): sandbox credit grants are open by default",
+      "author": "shalombook"
+    },
+    {
+      "sha": "86db137",
+      "message": "fix(payment): never report a purchase as processed when it was not recorded",
+      "author": "shalombook"
+    },
+    {
+      "sha": "f5bae25",
+      "message": "test(payment): cover the Apple credit grant and refund state machine",
+      "author": "shalombook"
+    },
+    {
+      "sha": "67be75a",
+      "message": "fix(legal): terms match the shipped app; drop banned phase-title default",
+      "author": "shalombook"
+    },
+    {
+      "sha": "5567db2",
+      "message": "feat(web): support page at /support (App Store review requires a real support URL)",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat(web): support page at /support (App Store review requires a real support URL)",
+      "scene": "Knight casually hammers a tiny wooden sign labeled '/support' into the mud outside the castle. A giant golden Apple Emperor in the sky nods approvingly. Villagers are weeping on their knees in front of the tiny sign, lighting candles.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A holy shrine where our crying may finally be heard!"
+        },
+        {
+          "speaker": "Other Villager",
+          "text": "I shall bring my sick goat to /support!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It is a blank page so Apple lets us open the shop."
+        }
+      ]
+    },
+    {
+      "title": "fix(payment): never report a purchase as processed when it was not recorded",
+      "scene": "A glowing ghost merchant hands a villager an invisible sword while shouting 'PURCHASE COMPLETE!' Knight slaps the ghost with a heavy leather ledger book, trapping it inside.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He slayed the lying demon! No more ghost receipts!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "If it is not written in the book, you did not buy it."
+        }
+      ]
+    },
+    {
+      "title": "fix(iap): a refund restores what actually left the balance, not what Apple revoked",
+      "scene": "A giant Apple Monster snatches a tiny coin from a villager, but a magic treasure chest explodes and dumps 10,000 gold coins onto the villager. Knight calmly fixes a tiny balance scale on top of the chest.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The cosmic math is healed! The chest knows true justice!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Apple took ten coins, but your account only had one."
+        }
+      ]
+    },
+    {
+      "title": "9 commits. 8 fixes. 1 feature. 1 giant apple satisfied.",
+      "scene": "Knight sitting slumped on a wooden bench, exhausted. In the background, villagers are carving a giant stone statue of a knight holding a giant apple and a receipt scroll.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall name our newborn baby Atomic-Refund!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "...I just fixed the store."
+        }
+      ]
+    }
+  ]
+}
