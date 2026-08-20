@@ -112,7 +112,7 @@ def call_gemini_with_retry(fn, *, label: str, max_attempts: int = 5):
 TARGET_REPO = os.environ.get("TARGET_REPO", "")
 COMIC_DIR = Path(__file__).resolve().parent.parent / "comic-strips"
 
-GEMINI_TEXT_MODEL = "gemini-2.0-flash"
+GEMINI_TEXT_MODEL = "gemini-3.6-flash"
 GEMINI_IMAGE_MODEL = "gemini-2.5-flash-image"
 
 # OpenAI is used as a fallback when Gemini returns 429 RESOURCE_EXHAUSTED.
