@@ -1,0 +1,76 @@
+{
+  "date": "2026-08-20",
+  "commits": [
+    {
+      "sha": "04045e9",
+      "message": "fix(payment): the live web gateway grant becomes atomic, and a failed grant no longer answers 200",
+      "author": "shalombook"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Fix: Failed payment returning 200 OK",
+      "scene": "A slimy goblin merchant burns a villager's bag of gold coins and hands him a glowing paper that reads '200 OK'. The villager weeps with confusion while the Knight stares with a flat expression.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The monster took my gold, gave me nothing, and smiled!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It was sending a 200 status code on failure. It lied."
+        }
+      ]
+    },
+    {
+      "title": "Refactor: Make web gateway grant atomic",
+      "scene": "A magical chest splits into two glowing halves. On one side, gold disappears; on the other, half a magic sword appears. The Knight slices the magic spell with his sword, fusing them back into a solid glowing blue cube.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Look! The spell either completes whole or doesn't start at all!"
+        },
+        {
+          "speaker": "Other villager",
+          "text": "No more receiving half a horse! Truly a miracle!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's called atomic. All or nothing."
+        }
+      ]
+    },
+    {
+      "title": "Fix: Return actual error when grant fails",
+      "scene": "A gigantic red stone banner falls from the sky landing in front of the castle gate reading '400 BAD REQUEST'. Villagers drop to their knees weeping tears of joy.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "It told us the truth! It admitted it failed!"
+        },
+        {
+          "speaker": "Other villager",
+          "text": "Such honesty! I shall build a church for this red message!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's literally an error code."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 1 payment system fixed. 0 fake smiles.",
+      "scene": "The Knight sits on a wooden bench drinking soup. In the background, villagers carry a golden statue of a giant '200' banner being smashed by a hammer while a priest baptizes a baby.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Meet my newborn baby, Atomic-Gateway!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please just buy your bread and go home."
+        }
+      ]
+    }
+  ]
+}
