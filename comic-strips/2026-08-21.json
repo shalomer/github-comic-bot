@@ -1,0 +1,68 @@
+{
+  "date": "2026-08-21",
+  "commits": [
+    {
+      "sha": "e12d826",
+      "message": "perf(images): re-encode public JPEGs at quality 85, 112MB to 27MB (#160)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "perf(images): 112MB of uncompressed public JPEGs",
+      "scene": "A giant, extremely heavy stone painting labeled 'hero_banner.jpg' is crushing three villagers and snapping a wooden wagon in half. The villagers scream under its huge weight.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The kingdom's pictures are too heavy! Our horses are sinking into the dirt!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Someone saved raw JPEGs at full quality."
+        }
+      ]
+    },
+    {
+      "title": "Re-encode JPEGs at quality 85",
+      "scene": "The calm knight uses a tiny chisel to lightly tap the massive stone painting. Suddenly, it turns into a light feather painting that floats gently in the air. A villager stares with wide eyes.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A miracle! But wait... does the King look fifteen percent uglier now?!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Human eyes cannot see the difference."
+        }
+      ]
+    },
+    {
+      "title": "112MB to 27MB (#160)",
+      "scene": "A huge mountain made of discarded megabyte boulders crumbles away, revealing a massive new open valley for the village. Villagers weep with joy and throw flowers into the empty space.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He gave us back eighty-five megabytes of sacred land!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just ran a single command."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 85MB saved. 76% lighter.",
+      "scene": "Knight sits on a simple wooden stool sipping water, looking slightly annoyed. In the background, villagers are building a giant golden monument of a JPEG file and throwing a huge parade.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall name our firstborn twin boys JPEG and WebP!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please do not do that."
+        }
+      ]
+    }
+  ]
+}
