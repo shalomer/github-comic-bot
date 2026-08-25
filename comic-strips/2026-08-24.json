@@ -1,0 +1,68 @@
+{
+  "date": "2026-08-24",
+  "commits": [
+    {
+      "sha": "8272004",
+      "message": "docs(meta): replace dead meta CLI with Pipeboard MCP as the access path (#161)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Bury the dead Meta CLI",
+      "scene": "Knight with a shovel digging a small grave for a mossy, crumbling stone labeled 'META CLI'. Villagers weep uncontrollably and toss black roses onto the grave.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The ancient Meta CLI has fallen! We are lost in darkness!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It broke two years ago. I'm taking it out of the code."
+        }
+      ]
+    },
+    {
+      "title": "Install Pipeboard MCP access path",
+      "scene": "Knight casually drops a shiny metal pipe labeled 'PIPEBOARD MCP' across a deep canyon. Divine beams of light burst out from the pipe as villagers fall to their knees praying.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A HOLY BRIDGE OF PIPES HAS SAVED OUR SOULS!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It just connects the two tools."
+        }
+      ]
+    },
+    {
+      "title": "Update documentation (#161)",
+      "scene": "Knight uses a feather pen to cross out 'meta cli' on a giant town scroll and writes 'Pipeboard MCP'. Confetti cannons explode and a parade of villagers dances behind him.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "HE REWROTE THE SACRED MAP! THE KINGDOM CAN READ AGAIN!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I changed one line in the help file."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 1 dead CLI removed. 1 new path opened.",
+      "scene": "Knight sitting tired on a wooden stool holding a cup of water. In the background, villagers build a giant metal pipe statue while a couple holds up a baby.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We named our newborn baby Pipeboard MCP!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please give that child a normal name."
+        }
+      ]
+    }
+  ]
+}
