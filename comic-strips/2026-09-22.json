@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-22",
+  "commits": [
+    {
+      "sha": "5e812e2",
+      "message": "docs(privacy): update the live /privacy page for AI services and consent (#167)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "7dce8ff",
+      "message": "docs(privacy): name every AI service, the data each gets, and in-app consent (#166)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "docs(privacy): name every AI service and data shared",
+      "scene": "A knight calmly unrolls a giant scroll in the town square listing glowing monster names like 'OpenAI' and 'Anthropic' with tiny buckets of data next to them. Villagers gasp in shock, clutching their hearts as if deep dark secrets were revealed.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He unmasked the wizard beasts! We know who eats our words now!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just wrote down three vendor names."
+        }
+      ]
+    },
+    {
+      "title": "docs(privacy): add in-app consent",
+      "scene": "The knight places a small wooden box with a simple 'YES / NO' switch on a pedestal. A peasant drops to his knees weeping tears of joy, staring at the switch like it is a holy relic.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A sacred lever to choose our own fate! Praise be!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It stores a single true or false value."
+        }
+      ]
+    },
+    {
+      "title": "docs(privacy): update live /privacy page",
+      "scene": "The knight nails a fresh piece of paper labeled '/privacy' onto the front gate. The entire village is on their knees, throwing rose petals at the piece of paper while lighting prayer candles around it.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The kingdom's laws are updated! Our souls are safe!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I pushed a markdown file to production."
+        }
+      ]
+    },
+    {
+      "title": "2 commits. 0 bugs. 1 law updated.",
+      "scene": "The knight sits exhausted on a wooden bench drinking water. In the background, villagers are erecting a giant stone statue of a giant checkmark. A mother holds up her baby toward the knight.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We named our newborn son User-Consent!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please do not do that."
+        }
+      ]
+    }
+  ]
+}
