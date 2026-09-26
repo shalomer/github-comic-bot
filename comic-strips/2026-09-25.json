@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-25",
+  "commits": [
+    {
+      "sha": "c48c5fc",
+      "message": "copy: last 'Get her Instagram' strings in preview and overview pages (#169)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "dd5def3",
+      "message": "copy: drop conquest framing from scenarios, scores and paths (#168)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Copy: remove last 'Get her Instagram' strings",
+      "scene": "Knight with a large chisel chipping away giant creepy floating stone letters above the village square that spell out 'GET HER INSTAGRAM'. Villagers weeping tears of joy, throwing carrier pigeons into the air.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The dark wizard's creepy scroll request is gone forever!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just deleted a text string from the preview page."
+        }
+      ]
+    },
+    {
+      "title": "Copy: drop conquest framing from scores and scenarios",
+      "scene": "A gigantic wooden scoreboard in the kingdom center. The old header 'BLOODTHIRSTY CONQUEST SCORE' is painted over with 'Friendly Conversation Points'. Knights in heavy armor are dropping their axes and weeping.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We can get a high score without invading a entire kingdom?!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I changed the text labels in two files."
+        }
+      ]
+    },
+    {
+      "title": "Copy: remove conquest framing from paths",
+      "scene": "A dirt road fork with a stone signpost. The top sign 'PATH OF TOTAL DOMINION' is crossed out with red paint and replaced with 'Path A'. A knight in full plate armor is kneeling and hugging a tiny flower.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The road no longer demands blood! We may walk in peace!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It is literally just a path name."
+        }
+      ]
+    },
+    {
+      "title": "2 commits. 0 conquests. 100% peace.",
+      "scene": "Knight slumped over exhausted at a tavern table with a cup of water. In the background, villagers are carving a giant marble statue of a knight holding an edit pencil.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall name our firstborn 'git-commit-m'!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please stop building statues."
+        }
+      ]
+    }
+  ]
+}
