@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-07",
+  "commits": [
+    {
+      "sha": "5faec42",
+      "message": "fix(delete-account): page title says what the page is",
+      "author": "shalombook"
+    },
+    {
+      "sha": "0a60010",
+      "message": "feat: /delete-account page + privacy policy covers Android (Android plan T2.5) (#171)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat: /delete-account page",
+      "scene": "A terrifying giant dark portal labelled 'DELETE ACCOUNT' appears in the town square. Villagers are weeping with joy, throwing flowers into the portal. Knight stands next to it casually leaning on a shovel.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A void to erase our past! We are free from our sins!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It deletes your row from the database."
+        }
+      ]
+    },
+    {
+      "title": "feat: privacy policy covers Android",
+      "scene": "A giant green robotic dragon labelled 'Android' hovers above the kingdom. Knight holds up a small parchment scroll to it. Villagers are bowing to the dragon in deep worship.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The Great Green Beast of Android has signed the sacred treaty!"
+        },
+        {
+          "speaker": "Other Villager",
+          "text": "Our secrets are safe in Plan T2.5!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I copy-pasted three lines of text."
+        }
+      ]
+    },
+    {
+      "title": "fix: page title says what the page is",
+      "scene": "Villager kneeling on the ground staring at a wooden sign above a shop door that was erased and repainted to say 'Delete Account'. Tears stream down his face.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The magic words have appeared! The browser tab is no longer named Untitled!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I typed eleven letters into the title tag."
+        }
+      ]
+    },
+    {
+      "title": "2 commits. 1 feature. 1 fix. 1 privacy policy.",
+      "scene": "Knight sitting exhausted on a wooden bench in the town square. In the background, villagers are carving a golden statue of a giant smartphone holding a sword.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall name our newborn daughter Android-Plan-T2.5!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please do not do that."
+        }
+      ]
+    }
+  ]
+}
