@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-09",
+  "commits": [
+    {
+      "sha": "5427254",
+      "message": "docs(plans): Android build plan (#170)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "docs(plans): Write Android build plan",
+      "scene": "Knight stands at a wooden lectern holding a single sheet of paper labeled 'Android Plan'. Thousands of medieval villagers are bowing down, weeping, and throwing flowers in total worship.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A PLAN HAS BEEN WRITTEN! The holy Green Robot will save us!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I just made a markdown file."
+        }
+      ]
+    },
+    {
+      "title": "docs(plans): Add Gradle setup instructions",
+      "scene": "A giant shadow monster made of endless nested scrolls labeled 'Gradle Dependencies' towers over the village. The Knight calmly scratches out two lines on his scroll with a feather quill. The monster shrinks into a tiny kitten.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "He banished the ancient Gradle beast using only ink!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I set Java to version 17."
+        }
+      ]
+    },
+    {
+      "title": "docs(plans): Specify target SDK version",
+      "scene": "Villagers in colorful robes carry a massive golden chest labeled '.APK' in a grand royal parade. A villager holds a baby up to touch the box while weeping.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "Bless us with the app, mighty savior!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "There is no app yet. This is just a list of target versions."
+        }
+      ]
+    },
+    {
+      "title": "1 commit. 1 documentation file. 0 lines of code.",
+      "scene": "Knight sitting exhausted on a stone bench, resting his head in his hand. In the background, villagers are erecting a giant stone statue of an Android robot wearing knight armor.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall name our children com.example.build!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I haven't even opened the code editor."
+        }
+      ]
+    }
+  ]
+}
