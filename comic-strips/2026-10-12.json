@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-12",
+  "commits": [
+    {
+      "sha": "cbd85d9",
+      "message": "feat(chatgpt-app): show a scorecard after the ChatGPT practice call (#174)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "4c06ab0",
+      "message": "feat(chatgpt-app): voice practice call inside ChatGPT (#173)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "feat: voice practice call inside ChatGPT",
+      "scene": "Knight casually hands a glowing magical scroll to a weeping villager. The scroll is visibly talking, surrounded by floating musical notes and noise waves. Villagers bow on the ground in utter shock.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "THE PAPER TALKS BACK! IT HAS A HUMAN SOUL!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just an audio stream inside ChatGPT."
+        }
+      ]
+    },
+    {
+      "title": "feat: show a scorecard after the ChatGPT practice call",
+      "scene": "A massive golden tablet crashes into the village square, glowing red with the text 'GRADE: C-'. A villager falls to his knees, staring at it in total despair.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "THE MAGIC TABLET SCORER HAS SEEN MY SIN OF POOR GRAMMAR!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It shows your stats when the call ends."
+        }
+      ]
+    },
+    {
+      "title": "Integrate scorecards into voice calls",
+      "scene": "A villager finishes shouting into a glowing magical orb. A mini ghost pops out of the orb and hands him a tiny report card. Villagers in the background throw confetti and cry tears of joy.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "IT LISTENED TO ME AND GAVE ME A REPORT CARD! WE ARE SAVED!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I connected two buttons."
+        }
+      ]
+    },
+    {
+      "title": "2 commits. 1 voice system. 1 scorecard.",
+      "scene": "Knight sits exhausted on a wooden barrel, drinking water. Behind him, villagers are busy chiseling a giant stone statue of a magical scorecard.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We shall name our newborn baby Practice Call!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please do not do that."
+        }
+      ]
+    }
+  ]
+}
