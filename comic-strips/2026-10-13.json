@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-13",
+  "commits": [
+    {
+      "sha": "e0ef8dc",
+      "message": "fix(feedback): show a short honest result when the user never spoke (#180)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "3d74ce2",
+      "message": "feat(chatgpt-app): one practice call a day, no free/demo wording, privacy + support sections (#179)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "fad23f7",
+      "message": "fix(chatgpt-app): keep serving old card URIs so a stale ChatGPT cache never shows a blank card (#178)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "b207e71",
+      "message": "feat(chatgpt-app): 5 minute demo call so slower talkers reach phase 3 (#177)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "ee0dcac",
+      "message": "feat(chatgpt-app): live tips in the ChatGPT practice call (#176)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "2cfe31d",
+      "message": "feat(chatgpt-app): she warms up over 3 phases in the ChatGPT practice call (#175)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Fix: show honest result when user never spoke",
+      "scene": "A villager weeping uncontrollably in front of a giant glowing magical stone. The stone displays the text 'RESULT: YOU SAID ZERO WORDS'. Knight stands beside it holding a wooden clipboard, looking completely deadpan.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The magic stone saw deep into my soul! It knew I stood in silence!"
+        },
+        {
+          "speaker": "Other Villager",
+          "text": "A miracle of truth! We shall build a temple for this feedback!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I added an if statement for empty strings."
+        }
+      ]
+    },
+    {
+      "title": "Fix: serve old card URIs so stale cache never shows blank card",
+      "scene": "Villagers screaming in panic around a floating invisible square, fearing 'the empty void'. The Knight casually tapes an old dusty paper map over the void.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "The void was consuming our magical cards! Nothingness ruled the land!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Your cache was stale. It now falls back to old image links."
+        },
+        {
+          "speaker": "Villager",
+          "text": "He banished the blankness with ancient scroll magic!"
+        }
+      ]
+    },
+    {
+      "title": "Feat: 5 minute call so slower talkers reach phase 3",
+      "scene": "An extremely slow-moving giant turtle villager trying to speak. A giant five-minute hourglass floats above his head. The Knight leans against his sword waiting patiently.",
+      "bubbles": [
+        {
+          "speaker": "Turtle Villager",
+          "text": "Hello... I... am... ready... to... speak..."
+        },
+        {
+          "speaker": "Villager",
+          "text": "He granted the slow elders enough time to reach phase three!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I changed the timeout variable from two to five."
+        }
+      ]
+    },
+    {
+      "title": "6 commits. 2 fixes. 4 features.",
+      "scene": "Knight sitting exhausted on a wooden stool, holding a cup of water. In the background, villagers are carving his face into the side of a giant mountain.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "We are naming our newborn baby 'Phase-Three-Cache-Fix' in your honor!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "Please just name him John."
+        }
+      ]
+    }
+  ]
+}
