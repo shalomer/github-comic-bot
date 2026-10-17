@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-16",
+  "commits": [
+    {
+      "sha": "8010c08",
+      "message": "chore(chatgpt-app): include the plugin's .mcp.json (ignored by the repo-wide .mcp.json rule)",
+      "author": "shalombook"
+    },
+    {
+      "sha": "822b7d9",
+      "message": "chore(chatgpt-app): add the submitted ChatGPT plugin package (v1.0.0) (#182)",
+      "author": "shalomer"
+    },
+    {
+      "sha": "5524771",
+      "message": "feat(chatgpt-app): serve OpenAI domain verification token (#181)",
+      "author": "shalomer"
+    }
+  ],
+  "panels": [
+    {
+      "title": "Include plugin's .mcp.json (override ignore rule)",
+      "scene": "A shiny glowing scroll labeled '.mcp.json' buried under a giant pile of mud labeled '.gitignore'. Knight digs it up with a small hand trowel. Villagers are falling to their knees, blinded by its beauty.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "THE HOLY SCROLL! HE RESCUED IT FROM THE DARK VOID OF IGNORE!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "The main rule was hiding it. I stopped hiding it."
+        }
+      ]
+    },
+    {
+      "title": "Add ChatGPT plugin package v1.0.0",
+      "scene": "Knight drops a gigantic glowing wooden crate labeled 'ChatGPT Plugin v1.0.0' right into the village square. Dust flies everywhere and a tiny goblin gets squished under it. Villagers scream in total shock and joy.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "A BRAND NEW SPELL PACKAGE FROM THE HEAVENS! VERSION ONE IS HERE!"
+        },
+        {
+          "speaker": "Other villager",
+          "text": "OUR VILLAGE IS NOW A SMART APP!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It's just the files we submitted."
+        }
+      ]
+    },
+    {
+      "title": "Serve OpenAI domain verification token",
+      "scene": "A massive giant floating eye in the sky labeled 'OpenAI'. Knight stands on a wooden tower holding up a tiny paper ticket with 'token_123' written on it. The giant eye beams down a light of approval.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "THE SKY MONSTER HAS APPROVED OUR KINGDOM! WE ARE LEGITIMATE!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "It literally just checks one route."
+        }
+      ]
+    },
+    {
+      "title": "3 commits. 1 app launched. 1 giant eye satisfied.",
+      "scene": "Knight sitting tired on a wooden bench taking off his helmet. In the background, villagers are carving a giant stone eye and erecting a wooden shrine around a curly brace '{ }'.",
+      "bubbles": [
+        {
+          "speaker": "Villager",
+          "text": "I shall name my newborn child Json-Token!"
+        },
+        {
+          "speaker": "Knight",
+          "text": "I need a drink."
+        }
+      ]
+    }
+  ]
+}
